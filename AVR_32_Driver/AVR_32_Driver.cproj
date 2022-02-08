@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{975f2c70-553f-4908-ba61-960d40bfb94b}</ProjectGuid>
+    <avrdevice>ATmega32</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>AVR_32_Driver</AssemblyName>
+    <Name>AVR_32_Driver</Name>
+    <RootNamespace>AVR_32_Driver</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../Services</Value>
+      <Value>../MCAL/DIO</Value>
+      <Value>../HAL/LED_File</Value>
+      <Value>../HAL/Relay_File</Value>
+      <Value>../HAL/BUZZER_File</Value>
+      <Value>../HAL/Push Button</Value>
+      <Value>../HAL/BCD 7-Segment</Value>
+      <Value>../HAL/Direct 7-Segment</Value>
+      <Value>../APP/GPIO_App</Value>
+      <Value>../MCAL/Interrupt</Value>
+      <Value>../MCAL/Timer 0,2</Value>
+      <Value>../HAL/Keypad</Value>
+      <Value>../APP/KeyPad_APP</Value>
+      <Value>../HAL/LCD_Screen</Value>
+      <Value>../MCAL/ADC</Value>
+      <Value>../APP/ADC_APP</Value>
+      <Value>../HAL/Tempreture_Sensor_LM35</Value>
+      <Value>../APP/LM35 On LCD</Value>
+      <Value>../APP/Calculator</Value>
+      <Value>../APP/Timer_APP</Value>
+      <Value>../APP/Timer_CTC_APP</Value>
+      <Value>../APP/Timer_OC0_NonPWM</Value>
+      <Value>../APP/TIMER_FastPWM</Value>
+      <Value>../APP/Timer_PhaseCorrectPWM</Value>
+      <Value>../APP/RealTimeClock</Value>
+      <Value>../APP/GameUsingTimer</Value>
+      <Value>../APP/Multiplaxing_2SevenSegment</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.miscellaneous.Verbose>True</avrgcc.compiler.miscellaneous.Verbose>
+  <avrgcc.compiler.miscellaneous.DoNotDeleteTemporaryFiles>True</avrgcc.compiler.miscellaneous.DoNotDeleteTemporaryFiles>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="APP\ADC_APP\ADC_APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\ADC_APP\ADC_APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Calculator\Calculator.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Calculator\Calculator.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\GameUsingTimer\GameUsingTimer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\GameUsingTimer\GameUsingTimer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\GPIO_App\GPIO_APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\GPIO_App\GPIO_APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\KeyPad_APP\KeyPad_APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\KeyPad_APP\KeyPad_APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\LM35 On LCD\LM35OnLCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\LM35 On LCD\LM35OnLCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Multiplaxing_2SevenSegment\Multi_7Segment.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Multiplaxing_2SevenSegment\Multi_7Segment.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\RealTimeClock\RealTimeClock.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\RealTimeClock\RealTimeClock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_APP\Timer_APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_APP\Timer_APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_CTC_APP\Timer_CTC_APP.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_CTC_APP\Timer_CTC_APP.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\TIMER_FastPWM\Timer_FastPWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\TIMER_FastPWM\Timer_FastPWM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Traffic_Light\Traffic_Light.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Traffic_Light\Traffic_Light.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="AVR_32_Driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BCD 7-Segment\BCD Seven Segment.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BCD 7-Segment\BCD Seven Segment.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUZZER_File\BUZZER.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\BUZZER_File\BUZZER.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Direct 7-Segment\Direct_7-Segment.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Direct 7-Segment\Direct_7-Segment.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Keypad\Keypad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Keypad\Keypad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD_Screen\LCD.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD_Screen\LCD.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED_File\LED.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LED_File\LED.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Push Button\Push Button.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Push Button\Push Button.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Relay_File\Relay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Relay_File\Relay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Tempreture_Sensor_LM35\LM35.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Tempreture_Sensor_LM35\LM35.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Water_Level_Seneor\Water_Level_Seneor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Water_Level_Seneor\Water_Level_Seneor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_File.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ADC\ADC_File.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\AVR32_Chip_Confg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\GPIO.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\DIO\GPIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Interrupt\Interrupt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Interrupt\Interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer 0,2\Timer0.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer 0,2\Timer0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Services\AVR_32_Registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Services\Macros_Functions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Services\STD_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="APP" />
+    <Folder Include="APP\GPIO_App" />
+    <Folder Include="APP\KeyPad_APP" />
+    <Folder Include="APP\ADC_APP" />
+    <Folder Include="APP\LM35 On LCD" />
+    <Folder Include="APP\Calculator" />
+    <Folder Include="APP\GameUsingTimer" />
+    <Folder Include="APP\Multiplaxing_2SevenSegment" />
+    <Folder Include="APP\Traffic_Light" />
+    <Folder Include="APP\RealTimeClock" />
+    <Folder Include="APP\Timer_PhaseCorrectPWM" />
+    <Folder Include="APP\TIMER_FastPWM" />
+    <Folder Include="APP\Timer_OC0_NonPWM" />
+    <Folder Include="APP\Timer_CTC_APP" />
+    <Folder Include="APP\Timer_APP" />
+    <Folder Include="HAL\LED_File" />
+    <Folder Include="HAL\BUZZER_File" />
+    <Folder Include="HAL\BCD 7-Segment" />
+    <Folder Include="HAL\Direct 7-Segment" />
+    <Folder Include="HAL\Keypad" />
+    <Folder Include="HAL\LCD_Screen" />
+    <Folder Include="HAL\Tempreture_Sensor_LM35" />
+    <Folder Include="HAL\Water_Level_Seneor" />
+    <Folder Include="HAL\Push Button" />
+    <Folder Include="HAL\Relay_File" />
+    <Folder Include="MCAL" />
+    <Folder Include="HAL" />
+    <Folder Include="MCAL\DIO" />
+    <Folder Include="MCAL\Interrupt" />
+    <Folder Include="MCAL\ADC" />
+    <Folder Include="MCAL\Timer 0,2" />
+    <Folder Include="OS" />
+    <Folder Include="Services" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
