@@ -1,5 +1,5 @@
 # AVR_Driver
-For AVR Embedded Course, I had code this driver to produce more electronics and robotics projects using AVR Microcontroller
+For AVR Embedded Course, I had write this Code driver to produce more electronics and robotics projects using AVR Microcontroller
 ## First,About Me :
 I'm Mahmoud Hamed Muhamed ,i'm Undergraduated Mechatronics Engineer
 I’m seeking a Chances that would increase my Embedded software engineering experience and enhance my background in Embedded Systems and automotive industry
