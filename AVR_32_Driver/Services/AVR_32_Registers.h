@@ -58,99 +58,83 @@ typedef struct   // struct has a Variable from GPIO_Register data type , its siz
 #define Port_D		((GPIO_Register *) (GPIOD_IO_ADDRESS+IO_MAPPING_OFFSET))
 
 
+/******************************************************************************************* The Interrupt Register and Pins Address *************************************************************************************************************************************************/
 
-	/******************************************************************************************* The Interrupt Register and Pins Address *************************************************************************************************************************************************/
+/* the MCU control Register */
+#define MCUCR_ADDRESS   (0x35)
 
-	/* the MCU control Register */
-	#define MCUCR_ADDRESS   (0x35)
+/* The MCU control and Statues Register */
+#define MCUCSR_ADDRESS  (0x34)
 
-	/* The MCU control and Statues Register */
-	#define MCUCSR_ADDRESS  (0x34)
+/* General Interrupt Control Register */
+#define GICR_ADDRESS    (0x3B)
 
-	/* General Interrupt Control Register */
-	#define GICR_ADDRESS    (0x3B)
+/*General Interrupt flag Register */
+#define GIFR_ADDRESS    (0x3A)
+/* Statues Register */
+#define SREG_ADDRESS    (0x3F)
 
-	/*General Interrupt flag Register */
-	#define GIFR_ADDRESS    (0x3A)
-	/* Statues Register */
-	#define SREG_ADDRESS    (0x3F)
-
-	/* Define The Value Of Address Of The MCUCR, NCUCSR, GICR, GIFR In C (The Mapped Address In RAM) */
-	#define  MCUCR      (*(volatile  uint_8 *)(MCUCR_ADDRESS + IO_MAPPING_OFFSET))
-	/*
-	 used to Configure the type of Interrupt form Setting or Clearing the bit of interrupts in MCUCR Register
-	  CLEAR_Bit(MCUCR,ISC00);
-	  CLEAR_Bit(MCUCR,ISC01);
-	  in the two above lines we make the interrupt 0 types low level
-	  used this register in Interrupt initalization function
-	 */
-	/* bits of The MCUCR register to Control INT0, INT1 */
-		#define ISC00_Bit		(0)
-		#define ISC01_Bit		(1)
-		#define ISC10_Bit		(2)
-		#define ISC11_Bit		(3)
-		#define SM0_Bit         (4)
-        #define SM1_Bit         (5)
-        #define SM2_Bit         (6)
-        #define SE_Bit          (7)
-	#define MCUCSR     (*(volatile uint_8 *)(MCUCSR_ADDRESS + IO_MAPPING_OFFSET))
-	/*
-		  used to Configure the type of Interrupt form Setting or Clearing the bit of interrupts in MCUCSR Register
-		  SET_BIT(MCUCSR,ISC2);
-		  in the two above lines we make the interrupt 2 types High level
-		  used this register in Interrupt initalization function
-	*/
-	/* bits of The MCUCSR register to Control INT2 */
-        #define PORF_Bit		(0)
-		#define EXTRF_Bit		(1)
-		#define BORF_Bit		(2)
-		#define WDRF_Bit		(3)
-		#define JTRF_Bit        (4)
-        #define ISC2_Bit        (6)
-        #define JTD_Bit         (7)
-	/* General Interrupt Control Register*/
-	#define GICR       (*(volatile uint_8 *)(GICR_ADDRESS   + IO_MAPPING_OFFSET))
-	/*
-		  used to Enable The Interrupt
-
-		  used this register in Interrupt initalization function
-	*/
-	/* bits of The GICR register to Enable interrupt With aiding of I_Bit in SREG Register */
-	    #define IVCE_Bit		(0)
-		#define IVSEL_Bit		(1)
-        #define INT2_Bit        (5)
-        #define INT1_Bit        (6)
-        #define INT0_Bit        (7)
-
-	/*General Interrupt Flag Register*/
-	#define GIFR       (*(volatile uint_8 *)(GIFR_ADDRESS   + IO_MAPPING_OFFSET))
-
-	    #define INTF2_Bit        (5)
-        #define INTF1_Bit        (6)
-        #define INTF0_Bit        (7)
-    #define SREG       (*(volatile uint_8 *)(SREG_ADDRESS   + IO_MAPPING_OFFSET))
-
-        #define I_Bit   (7)
-
-
-
+/* Define The Value Of Address Of The MCUCR, NCUCSR, GICR, GIFR In C (The Mapped Address In RAM) */
+#define  MCUCR      (*(volatile  uint_8 *)(MCUCR_ADDRESS + IO_MAPPING_OFFSET))
+/*
+used to Configure the type of Interrupt form Setting or Clearing the bit of interrupts in MCUCR Register
+ CLEAR_Bit(MCUCR,ISC00);
+ CLEAR_Bit(MCUCR,ISC01);
+in the two above lines we make the interrupt 0 types low level used this register in Interrupt initalization function
+*/
+/* bits of The MCUCR register to Control INT0, INT1 */
+#define ISC00_Bit		(0)
+#define ISC01_Bit		(1)
+#define ISC10_Bit		(2)
+#define ISC11_Bit		(3)
+#define SM0_Bit                 (4)
+#define SM1_Bit         (5)
+#define SM2_Bit         (6)
+#define SE_Bit          (7)
+#define MCUCSR     (*(volatile uint_8 *)(MCUCSR_ADDRESS + IO_MAPPING_OFFSET))
+/*
+used to Configure the type of Interrupt form Setting or Clearing the bit of interrupts in MCUCSR Register
+SET_BIT(MCUCSR,ISC2);
+in the two above lines we make the interrupt 2 types High level used this register in Interrupt initalization function
+*/
+/* bits of The MCUCSR register to Control INT2 */
+#define PORF_Bit		(0)
+#define EXTRF_Bit		(1)
+#define BORF_Bit		(2)
+#define WDRF_Bit		(3)
+#define JTRF_Bit        (4)
+#define ISC2_Bit        (6)
+#define JTD_Bit         (7)
+/* General Interrupt Control Register*/
+#define GICR       (*(volatile uint_8 *)(GICR_ADDRESS   + IO_MAPPING_OFFSET))
+/*
+used to Enable The Interrupt
+used this register in Interrupt initalization function
+*/
+/* bits of The GICR register to Enable interrupt With aiding of I_Bit in SREG Register */
+#define IVCE_Bit		(0)
+#define IVSEL_Bit		(1)
+#define INT2_Bit        (5)
+#define INT1_Bit        (6)
+#define INT0_Bit        (7)
+/*General Interrupt Flag Register*/
+#define GIFR       (*(volatile uint_8 *)(GIFR_ADDRESS   + IO_MAPPING_OFFSET))
+#define INTF2_Bit        (5)
+#define INTF1_Bit        (6)
+#define INTF0_Bit        (7)
+#define SREG       (*(volatile uint_8 *)(SREG_ADDRESS   + IO_MAPPING_OFFSET))
+#define I_Bit   (7)
 /******************************************************************************************************************* USART In THe AVR ******************************************************************************************************************************/
-
-
 #define UCSRA_ADDRESS   (0x0B)
 #define UCSRB_ADDRESS   (0x0A)
 #define UCSRC_ADDRESS   (0x20)
 #define UBRRH_ADDRESS   (0x20)
 #define UBRRL_ADDRESS   (0x09)
 #define UDR_ADDRESS     (0x0C)
-
-
 /* Define The Value Of Address Of The UCSRA, UCSRB, UCSRC, UBRRH, UBRRL, UDR In C (The Mapped Address In RAM) */
-
 #define UCSRA    (*(volatile uint8 *)(UCSRA_ADDRESS + IO_MAPPING_OFFSET))
 #define RXC    (7)
 #define TXC    (6)
-/* indicate if the transmitter buffer is ready to receive */ 
 #define UDRE   (5)
 /* Errors Flag FE for indicate the stop bit error
  * DOR data over right 
@@ -163,7 +147,6 @@ typedef struct   // struct has a Variable from GPIO_Register data type , its siz
 #define U2X    (1)
 /* Enable the multi processor communication */
 #define MPCM   (0)
-
 #define UCSRB    (*(volatile uint8 *)(UCSRB_ADDRESS + IO_MAPPING_OFFSET))
 #define RXCIE  (7)
 /* Enable interrupt  */
@@ -197,77 +180,77 @@ typedef struct   // struct has a Variable from GPIO_Register data type , its siz
 
 /************************************************************************************************ Timers Registers ***************************************************************************************************/
 
-	/* The Address of The Timer 0 Register */
-	#define TCCR0_ADDRESS  (0x33)
-	#define TCNT0_ADDRESS  (0x32)
-	/*Output Compare Register */
-    #define OCR0_ADDRESS   (0x3C)
-	//The Output Compare Register contains an 8-bit value
-	//that is continuously compared with the counter value (TCNT0).
-	//A match can be used to generate an output compare interrupt
-	//or to generate a waveform output on the OC0 pin
+/* The Address of The Timer 0 Register */
+#define TCCR0_ADDRESS  (0x33)
+#define TCNT0_ADDRESS  (0x32)
+/*Output Compare Register */
+#define OCR0_ADDRESS   (0x3C)
+//The Output Compare Register contains an 8-bit value
+//that is continuously compared with the counter value (TCNT0).
+//A match can be used to generate an output compare interrupt
+//or to generate a waveform output on the OC0 pin
 
-	/* general Registers Use With The Timers 0,1,2 */
-	#define TIFR_ADDRESS   (0x38)
-	/* Timer Interrupt Mask Register control the interrupt enable */
-	#define TIMASK_ADDRESS (0x39)
-	/*
-	 * in Timer 0 we need the bit 0 , 1
-	 * Bit 0 : TOIE 0 : Timer/Counter0 Overflow Interrupt Enable
-	 *        When the TOIE0 bit is written to one, and the I-bit in the Status Register is set (one),
-	 *        the Timer/Counter0 Overflow interrupt is enabled.which is executed if an overflow in Timer/Counter0
-	 *        occurs, that is, when the TOV0 bit is set in the Timer/Counter Interrupt Flag Register – TIFR.
-	 * Bit 1 : OCIE 0 : Timer/Counter0 Output Compare Match Interrupt Enable
-	 *        When the OCIE0 bit is written to one, and the I-bit in the Status Register is set (one),
-	 *        the Timer/Counter0 Compare Match interrupt is enabled.which is executed if a compare match in Timer/Counter0
-	 *        occurs,that is, when the OCF0 bit is set in the Timer/Counter Interrupt Flag Register – TIFR
-	 * */
+/* general Registers Use With The Timers 0,1,2 */
+#define TIFR_ADDRESS   (0x38)
+/* Timer Interrupt Mask Register control the interrupt enable */
+#define TIMASK_ADDRESS (0x39)
+/*
+* in Timer 0 we need the bit 0 , 1
+* Bit 0 : TOIE 0 : Timer/Counter0 Overflow Interrupt Enable
+*        When the TOIE0 bit is written to one, and the I-bit in the Status Register is set (one),
+*        the Timer/Counter0 Overflow interrupt is enabled.which is executed if an overflow in Timer/Counter0
+*        occurs, that is, when the TOV0 bit is set in the Timer/Counter Interrupt Flag Register Â– TIFR.
+*        Bit 1 : OCIE 0 : Timer/Counter0 Output Compare Match Interrupt Enable
+*        When the OCIE0 bit is written to one, and the I-bit in the Status Register is set (one),
+*        the Timer/Counter0 Compare Match interrupt is enabled.which is executed if a compare match in Timer/Counter0
+*        occurs,that is, when the OCF0 bit is set in the Timer/Counter Interrupt Flag Register Â– TIFR
+* */
 
-	/* Counter Register For The Timer 0 */
-	#define TCNT0   (*(volatile uint_8 *)(TCNT0_ADDRESS + IO_MAPPING_OFFSET))
-	/* Timer Counter Control Register in Timer 0 */
-	#define TCCR0   (*(volatile uint_8 *)(TCCR0_ADDRESS + IO_MAPPING_OFFSET))
-	
-	/* Timer Interrupt Flag Register */
-	#define TIFR    (*(volatile uint_8 *)(TIFR_ADDRESS  + IO_MAPPING_OFFSET))
-	/* Timer Interrupt Mask Register control the interrupt*/
-	#define TIMSK     (*(volatile uint_8 *)(TIMASK_ADDRESS + IO_MAPPING_OFFSET))
-	/* Output Compare Register */
-    #define OCR0      (*(volatile uint_8 *)(OCR0_ADDRESS + IO_MAPPING_OFFSET))
-	//The Output Compare Register contains an 8-bit value that is continuously compared with the counter value (TCNT0)
-	/* TCCR0 Bit */
-	#define CS00_bit    (0)
-	#define CS01_bit    (1)
-	#define CS02_bit    (2)
-	#define WGM01_bit   (3)
-	#define COM00_bit   (4)
-	#define COM01_bit   (5)
-	#define WGM00_bit   (6)
-	#define FOC0_bit    (7)
+/* Counter Register For The Timer 0 */
+#define TCNT0   (*(volatile uint_8 *)(TCNT0_ADDRESS + IO_MAPPING_OFFSET))
+/* Timer Counter Control Register in Timer 0 */
+#define TCCR0   (*(volatile uint_8 *)(TCCR0_ADDRESS + IO_MAPPING_OFFSET))
 
-	/* TIFR Bit */
-	#define TOV0_bit  (0)
-	#define OCF0_bit  (1)
-	#define TOV1_bit  (2)
-	#define OCF1B_bit (3)
-	#define OCF1A_bit (4)
-    #define ICF1_bit  (5)
-	#define TOV2_bit  (6)
-	#define OCF2_bit  (7)
+/* Timer Interrupt Flag Register */
+#define TIFR    (*(volatile uint_8 *)(TIFR_ADDRESS  + IO_MAPPING_OFFSET))
+/* Timer Interrupt Mask Register control the interrupt*/
+#define TIMSK     (*(volatile uint_8 *)(TIMASK_ADDRESS + IO_MAPPING_OFFSET))
+/* Output Compare Register */
+#define OCR0      (*(volatile uint_8 *)(OCR0_ADDRESS + IO_MAPPING_OFFSET))
+//The Output Compare Register contains an 8-bit value that is continuously compared with the counter value (TCNT0)
+/* TCCR0 Bit */
+#define CS00_bit    (0)
+#define CS01_bit    (1)
+#define CS02_bit    (2)
+#define WGM01_bit   (3)
+#define COM00_bit   (4)
+#define COM01_bit   (5)
+#define WGM00_bit   (6)
+#define FOC0_bit    (7)
 
-	/* TIMASK Bit */
-	//Timer/Counter0 Overflow Interrupt Enable with the help of I-bit in SREG Register
-	// setting (TOIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer overflow interrupt
-	#define TOIE0_bit   (0)
-	//Timer/Counter0 Output Compare Match Interrupt Enable with the help of I-bit in SREG Register
-    // setting (OCIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer Output Compare Match interrupt
-	#define OCIE0_bit   (1)
-	#define TOIE1_bit   (2)
-	#define OCIE1B_bit  (3)
-	#define OCIE1A_bit  (4)
-	#define TICIE1_bit  (5)
-	#define TOIE2_bit   (6)
-	#define OCIE2_bit   (7)
+/* TIFR Bit */
+#define TOV0_bit  (0)
+#define OCF0_bit  (1)
+#define TOV1_bit  (2)
+#define OCF1B_bit (3)
+#define OCF1A_bit (4)
+#define ICF1_bit  (5)
+#define TOV2_bit  (6)
+#define OCF2_bit  (7)
+
+/* TIMASK Bit */
+//Timer/Counter0 Overflow Interrupt Enable with the help of I-bit in SREG Register
+// setting (TOIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer overflow interrupt
+#define TOIE0_bit   (0)
+//Timer/Counter0 Output Compare Match Interrupt Enable with the help of I-bit in SREG Register
+// setting (OCIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer Output Compare Match interrupt
+#define OCIE0_bit   (1)
+#define TOIE1_bit   (2)
+#define OCIE1B_bit  (3)
+#define OCIE1A_bit  (4)
+#define TICIE1_bit  (5)
+#define TOIE2_bit   (6)
+#define OCIE2_bit   (7)
 
 /* The Address of The Timer 2 Register */
 #define TCCR2_ADDRESS (0x25)
