@@ -132,7 +132,69 @@ typedef struct   // struct has a Variable from GPIO_Register data type , its siz
 
         #define I_Bit   (7)
 
-	//*********************************************************************************************************************
+
+
+/******************************************************************************************************************* USART In THe AVR ******************************************************************************************************************************/
+
+
+#define UCSRA_ADDRESS   (0x0B)
+#define UCSRB_ADDRESS   (0x0A)
+#define UCSRC_ADDRESS   (0x20)
+#define UBRRH_ADDRESS   (0x20)
+#define UBRRL_ADDRESS   (0x09)
+#define UDR_ADDRESS     (0x0C)
+
+
+/* Define The Value Of Address Of The UCSRA, UCSRB, UCSRC, UBRRH, UBRRL, UDR In C (The Mapped Address In RAM) */
+
+#define UCSRA    (*(volatile uint8 *)(UCSRA_ADDRESS + IO_MAPPING_OFFSET))
+#define RXC    (7)
+#define TXC    (6)
+/* indicate if the transmitter buffer is ready to receive */ 
+#define UDRE   (5)
+/* Errors Flag FE for indicate the stop bit error
+ * DOR data over right 
+ * PE parity check detection 
+ */ 
+#define FE     (4)
+#define DOR    (3)
+#define PE     (2)
+/* to double USART transmission speed */
+#define U2X    (1)
+/* Enable the multi processor communication */
+#define MPCM   (0)
+
+#define UCSRB    (*(volatile uint8 *)(UCSRB_ADDRESS + IO_MAPPING_OFFSET))
+#define RXCIE  (7)
+/* Enable interrupt  */
+#define TXCIE  (6)
+#define UDRIE  (5)
+#define RXEN   (4)
+#define TXEN   (3)
+/* combined with UCSZ 1:0 to set the number of the data bit */
+#define UCSZ2  (2)
+/* ninth bit place at transmission or receiver */
+#define RXB8   (1)
+#define TXB8   (0)
+#define UCSRC    (*(volatile uint8 *)(UCSRC_ADDRESS + IO_MAPPING_OFFSET))
+/* this bit select between access UCSRC and UBRRH register if it set reading UCSRC */
+#define URSEL  (7)
+/* UART mode select between synch or Asynch */
+#define UMSEL  (6)
+/* this bit Withe UPM0 select the parity mode */
+#define UPM1   (5)
+#define UPM0   (4)
+/* select the number of the stop bit 1 or 2 */
+#define USBS   (3)
+#define UCSZ1  (2)
+#define UCSZ0  (1)
+/* define clock Polarity */
+#define UCPOL  (0)
+
+#define UBRRH    (*(volatile uint8 *)(UBRRH_ADDRESS + IO_MAPPING_OFFSET))
+#define UBRRL    (*(volatile uint8 *)(UBRRL_ADDRESS + IO_MAPPING_OFFSET))
+#define UDR      (*(volatile uint8 *)(UDR_ADDRESS   + IO_MAPPING_OFFSET))
+
 /************************************************************************************************ Timers Registers ***************************************************************************************************/
 
 	/* The Address of The Timer 0 Register */
