@@ -1,5 +1,5 @@
 # 1 ".././AVR_32_Driver.c"
-# 1 "C:\\Users\\Mahm Oud Sa Ad\\OneDrive - Higher Technological Institute\\Desktop\\Embedded Data\\Driver_To_Finish\\AVR_32_Driver\\AVR_32_Driver\\Debug//"
+# 1 "C:\\Users\\Mahm Oud Sa Ad\\Downloads\\My-Github\\AVR_Driver\\AVR_32_Driver\\Debug//"
 # 1 "<command-line>"
 # 1 ".././AVR_32_Driver.c"
 

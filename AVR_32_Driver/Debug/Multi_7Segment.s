@@ -1416,8 +1416,6 @@ counter_app_2:
 	.string	"FastPWM_mode"
 .LASF32:
 	.string	"Seven_Segment_Type"
-.LASF55:
-	.string	"Timer_OutPut_Compare_match"
 .LASF64:
 	.string	"Set_upCount_Clear_DownCount"
 .LASF28:
@@ -1428,8 +1426,8 @@ counter_app_2:
 	.string	"Timer0"
 .LASF34:
 	.string	"Timer2"
-.LASF72:
-	.string	"Multi_7_Segment_Init_System"
+.LASF85:
+	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF61:
 	.string	"NON_inverting_mode"
 .LASF87:
@@ -1466,8 +1464,8 @@ counter_app_2:
 	.string	"Timer_Number"
 .LASF77:
 	.string	"Display_Counter"
-.LASF85:
-	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\OneDrive - Higher Technological Institute\\\\Desktop\\\\Embedded Data\\\\Driver_To_Finish\\\\AVR_32_Driver\\\\AVR_32_Driver\\\\Debug"
+.LASF11:
+	.string	"PORT"
 .LASF1:
 	.string	"unsigned char"
 .LASF83:
@@ -1484,8 +1482,8 @@ counter_app_2:
 	.string	"Timer_mode"
 .LASF57:
 	.string	"OC_Disconnected"
-.LASF11:
-	.string	"PORT"
+.LASF55:
+	.string	"Timer_OutPut_Compare_match"
 .LASF40:
 	.string	"Timer_mode_selection"
 .LASF45:
@@ -1504,6 +1502,8 @@ counter_app_2:
 	.string	"char"
 .LASF46:
 	.string	"CLK_128"
+.LASF72:
+	.string	"Multi_7_Segment_Init_System"
 .LASF15:
 	.string	"INPUT_Float"
 .LASF53:

@@ -1292,6 +1292,8 @@ ADC_PIN:
 	.string	"ADC_Diff_Mode"
 .LASF61:
 	.string	"volt"
+.LASF67:
+	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF40:
 	.string	"AnalogComparator"
 .LASF47:
@@ -1324,8 +1326,6 @@ ADC_PIN:
 	.string	"Move_Curser_LCD"
 .LASF69:
 	.string	"LCD_Init"
-.LASF67:
-	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\OneDrive - Higher Technological Institute\\\\Desktop\\\\Embedded Data\\\\Driver_To_Finish\\\\AVR_32_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF2:
 	.string	"unsigned char"
 .LASF65:

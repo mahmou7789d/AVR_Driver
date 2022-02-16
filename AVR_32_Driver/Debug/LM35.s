@@ -943,6 +943,8 @@ Read_LM35_Temp:
 	.string	"Adjust_Right"
 .LASF21:
 	.string	"ADC_Diff_Mode"
+.LASF65:
+	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF40:
 	.string	"AnalogComparator"
 .LASF47:
@@ -969,8 +971,6 @@ Read_LM35_Temp:
 	.string	"ADC_Pin"
 .LASF44:
 	.string	"TimerCounterCompareMatchB"
-.LASF65:
-	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\OneDrive - Higher Technological Institute\\\\Desktop\\\\Embedded Data\\\\Driver_To_Finish\\\\AVR_32_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF1:
 	.string	"unsigned char"
 .LASF63:

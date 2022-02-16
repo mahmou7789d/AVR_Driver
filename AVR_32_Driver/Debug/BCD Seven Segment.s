@@ -1247,16 +1247,16 @@ Sev_Seg_Write:
 	.section	.debug_str,"MS",@progbits,1
 .LASF40:
 	.string	"Sev_Seg_Write"
-.LASF21:
-	.string	"HIGH"
+.LASF45:
+	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF43:
 	.string	"GNU C 4.8.1 -fpreprocessed -mmcu=atmega32 -g2 -O3 -std=gnu99 -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -fpack-struct -fshort-enums"
 .LASF31:
 	.string	"ADC_Diff_Mode"
 .LASF42:
 	.string	"Written_Num"
-.LASF2:
-	.string	"short unsigned int"
+.LASF32:
+	.string	"GPIO_pin_number"
 .LASF36:
 	.string	"C_pin"
 .LASF35:
@@ -1279,12 +1279,10 @@ Sev_Seg_Write:
 	.string	"PIN6"
 .LASF30:
 	.string	"PIN7"
-.LASF32:
-	.string	"GPIO_pin_number"
 .LASF3:
 	.string	"long unsigned int"
-.LASF45:
-	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\OneDrive - Higher Technological Institute\\\\Desktop\\\\Embedded Data\\\\Driver_To_Finish\\\\AVR_32_Driver\\\\AVR_32_Driver\\\\Debug"
+.LASF2:
+	.string	"short unsigned int"
 .LASF41:
 	.string	"sevev_seg"
 .LASF10:
@@ -1335,6 +1333,8 @@ Sev_Seg_Write:
 	.string	"short int"
 .LASF16:
 	.string	"GPIO_Register"
+.LASF21:
+	.string	"HIGH"
 .LASF7:
 	.string	"long int"
 .LASF17:

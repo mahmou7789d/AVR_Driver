@@ -121,6 +121,7 @@
       <Value>../APP/RealTimeClock</Value>
       <Value>../APP/GameUsingTimer</Value>
       <Value>../APP/Multiplaxing_2SevenSegment</Value>
+      <Value>../MCAL/CommuncationProtocols</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
@@ -293,6 +294,12 @@
     <Compile Include="MCAL\ADC\ADC_File.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\CommuncationProtocols\USART_File.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\CommuncationProtocols\USART_File.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MCAL\DIO\AVR32_Chip_Confg.h">
       <SubType>compile</SubType>
     </Compile>
@@ -355,6 +362,7 @@
     <Folder Include="MCAL\DIO" />
     <Folder Include="MCAL\Interrupt" />
     <Folder Include="MCAL\ADC" />
+    <Folder Include="MCAL\CommuncationProtocols" />
     <Folder Include="MCAL\Timer 0,2" />
     <Folder Include="OS" />
     <Folder Include="Services" />
