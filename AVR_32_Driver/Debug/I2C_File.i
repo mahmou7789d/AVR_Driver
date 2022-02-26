@@ -9,8 +9,6 @@
 
 
 
-# 1 "../MCAL/CommuncationProtocols/I2C_File.h" 1
-# 12 "../MCAL/CommuncationProtocols/I2C_File.h"
 # 1 "../MCAL/DIO/GPIO.h" 1
 # 10 "../MCAL/DIO/GPIO.h"
 # 1 "../MCAL/DIO/AVR32_Chip_Confg.h" 1
@@ -101,28 +99,17 @@ uint_8 GPIO_Port_Read (GPIO_Register *Chip_port);
 void GPIO_Write_High_Nibble(uint_8 Port_Name,uint_8 High_Nibble_value);
 void GPIO_Write_Low_Nibble(uint_8 Port_Name,uint_8 Low_Nibble_value);
 void GPIO_Pin_Enable_PULLUP_RES(GPIO_Register *Chip_port,GPIO_pin_number pin_num,Pull_UP_RES_State Pull_Up);
-# 13 "../MCAL/CommuncationProtocols/I2C_File.h" 2
-# 1 "../MCAL/Interrupt/Interrupt.h" 1
-# 95 "../MCAL/Interrupt/Interrupt.h"
-    typedef enum
- {
-  EXINT_LowLevel,
-  EXINT_logical_change,
-  EXINT_FallingEdge,
-  EXINT_RisingEdge,
- }ExInterrupt_Modes;
- typedef enum
- {
-  EXINT_INT0,
-  EXINT_INT1,
-  EXINT_INT2,
- }EXInterrupt_Source;
- extern void (* EXT_INT0_ISR) (void);
- extern void (* EXT_INT1_ISR) (void);
- extern void (* EXT_INT2_ISR) (void);
- void EXTINT_InterruptInit(EXInterrupt_Source source,ExInterrupt_Modes Mode);
-# 14 "../MCAL/CommuncationProtocols/I2C_File.h" 2
-# 23 "../MCAL/CommuncationProtocols/I2C_File.h"
+# 9 "../MCAL/CommuncationProtocols/I2C_File.c" 2
+# 1 "../MCAL/CommuncationProtocols/I2C_File.h" 1
+# 21 "../MCAL/CommuncationProtocols/I2C_File.h"
+typedef enum
+{
+ Master_Transmitter,
+ Master_Receiver,
+ Slave_Transmitter,
+ Slave_Receiver,
+}Micro_Mode;
+
 typedef enum
 {
  No_Presaler,
@@ -155,13 +142,6 @@ typedef enum
  TWI_Interrupt_Enabled,
 }TWI_Interrupt_status;
 
-typedef enum
-{
- Master_Transmitter,
- Master_Receiver,
- Slave_Transmitter,
- Slave_Receiver,
-}Micro_Mode;
 
 typedef struct
 {
@@ -173,32 +153,20 @@ typedef struct
 
 extern TWi_Micro_data TWI_1;
 
-void TWI_INIT(uint_8 SCL_F);
+
+
+void Set_SLA_Value(uint_8 address);
+void TWI_INIT(uint_32 SCL_F);
 void TWI_Start(uint_8 SLA_Value);
-void TWI_Stop ();
 void TWI_Write_Byte(uint_8 T_Data);
+void TWI_Stop(void);
 uint_8 TWI_Read_Byte();
-# 9 "../MCAL/CommuncationProtocols/I2C_File.c" 2
-
+# 10 "../MCAL/CommuncationProtocols/I2C_File.c" 2
 TWi_Micro_data TWI_1={0};
-
-void TWI_INIT(uint_8 SCL_F)
+void TWI_INIT(uint_32 SCL_F)
 {
-
  uint_8 Presaler_Val=0;
  uint_8 TWSR_Temp =0;
- uint_8 TWCR_Temp =0;
- switch(TWI_1.TWI_state)
- {
-  case TWI_Enabled:
-  (TWCR_Temp |= (1<<(2)));
-  break;
-  case TWI_Disables:
-  (TWCR_Temp &= ~(1<<(2)));
-  break;
-  default:
-  break;
- }
  switch(TWI_1.Presaler_Val)
  {
   case No_Presaler:
@@ -224,63 +192,73 @@ void TWI_INIT(uint_8 SCL_F)
   default:
   break;
  }
- (*(volatile uint_8 *)((0x36)+(0x20))) = TWCR_Temp;
  (*(volatile uint_8 *)((0x01)+(0x20))) = TWSR_Temp;
- (*(volatile uint_8 *)((0x00)+(0x20))) = ((((16000000U) /SCL_F)-16)/(2*Presaler_Val));
+ (*(volatile uint_8 *)((0x00)+(0x20)))= (uint_8) ((((16000000U)/SCL_F)-16) / (2*Presaler_Val));
 }
 void TWI_Start(uint_8 SLA_Value)
 {
  switch(TWI_1.Micro_state)
  {
   case Master_Transmitter:
-       ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
-       ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
-       ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(5)));
-       while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
-       while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x08);
-    (*(volatile uint_8 *)((0x03)+(0x20))) = SLA_Value;
-    ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
-    ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
-    while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
-    while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x18);
-       break;
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(5)));
+  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
+  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x08);
+  (*(volatile uint_8 *)((0x03)+(0x20))) = SLA_Value;
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
+  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x18);
+  break;
   case Master_Receiver:
+  break;
   case Slave_Transmitter:
+  break;
   case Slave_Receiver:
-       (*(volatile uint_8 *)((0x02)+(0x20))) = SLA_Value;
-    ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
-    ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(6)));
-    ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
-    while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
-    while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x60);
+  (*(volatile uint_8 *)((0x02)+(0x20))) = SLA_Value;
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(6)));
+  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
+  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x60);
+  break;
   default:
-       break;
+  break;
  }
 }
 void TWI_Write_Byte(uint_8 T_Data)
 {
  (*(volatile uint_8 *)((0x03)+(0x20))) = T_Data;
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+ (*(volatile uint_8 *)((0x36)+(0x20)))=(1<<(7))|(1<<(2));
  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x28);
 }
 
-uint_8 TWI_Read_Byte()
+void TWI_Stop(void)
 {
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(4)));
+}
+
+void Set_SLA_Value(uint_8 address)
+{
+ (*(volatile uint_8 *)((0x02)+(0x20)))=address;
+}
+
+uint_8 TWI_Read_Byte(void)
+{
+
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(6)));
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+ while(( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7)))==0);
+ while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x60);
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(6)));
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x80);
- return (*(volatile uint_8 *)((0x02)+(0x20)));
-}
-
-void TWI_Stop()
-{
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(4)));
- while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
- while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((4))) ) >> ((4))) !=0);
+ return (*(volatile uint_8 *)((0x03)+(0x20)));
 }

@@ -615,28 +615,7 @@ void TIMER_Delay(TIMER_DataType Timer_Details,uint_8 inital_Value);
 void TIMER0_Preload_TCNT0(uint_8 TIMER0_TCNT0_val);
 void TIMER0_Preload_OCR0(float_32 TIMER0_OCR0_val);
 # 11 ".././AVR_32_Driver.c" 2
-# 1 "../HAL/LED_File/LED.h" 1
-# 13 "../HAL/LED_File/LED.h"
-typedef struct
-{
- GPIO_Register *LED_port;
- GPIO_pin_number LED_pin;
- Digital_pinState LED_Init_State;
-}Led_Data;
-typedef enum
-{
-  LED_FW_OFF =LOW,
-  LED_FW_ON =HIGH,
-  LED_REV_ON =LOW,
-  LED_REV_OFF =HIGH,
-}Led_State;
- void Led_Start (Led_Data LED_init);
- void Led_State_Control(Led_Data LED_init,Led_State LED_state);
- Digital_pinState Led_Get_State (Led_Data LED_init);
- void Led_Toggle (Led_Data LED_init);
- void Led_Stop_FW (Led_Data LED_init);
- void Led_Stop_REV (Led_Data LED_init);
-# 12 ".././AVR_32_Driver.c" 2
+
 # 1 "../MCAL/Interrupt/Interrupt.h" 1
 # 13 ".././AVR_32_Driver.c" 2
 # 1 "../APP/Timer_CTC_APP/Timer_CTC_APP.h" 1
@@ -772,9 +751,28 @@ void USART_RXC_Complete_Callback(void (*USART_RXC_Complete_User_ptr) (void));
 void USART_TXC_Complete_Callback(void (*USART_TXC_Complete_User_ptr) (void));
 void USART_UDRE_Callback(void (*USART_UDRE_User_ptr) (void));
 # 22 ".././AVR_32_Driver.c" 2
-
-
-
+# 1 "../HAL/LED_File/LED.h" 1
+# 13 "../HAL/LED_File/LED.h"
+typedef struct
+{
+ GPIO_Register *LED_port;
+ GPIO_pin_number LED_pin;
+ Digital_pinState LED_Init_State;
+}Led_Data;
+typedef enum
+{
+  LED_FW_OFF =LOW,
+  LED_FW_ON =HIGH,
+  LED_REV_ON =LOW,
+  LED_REV_OFF =HIGH,
+}Led_State;
+ void Led_Start (Led_Data LED_init);
+ void Led_State_Control(Led_Data LED_init,Led_State LED_state);
+ Digital_pinState Led_Get_State (Led_Data LED_init);
+ void Led_Toggle (Led_Data LED_init);
+ void Led_Stop_FW (Led_Data LED_init);
+ void Led_Stop_REV (Led_Data LED_init);
+# 23 ".././AVR_32_Driver.c" 2
 # 1 "../MCAL/EEPROM/EEPROM.h" 1
 # 44 "../MCAL/EEPROM/EEPROM.h"
 # 1 "../MCAL/Interrupt/Interrupt.h" 1
@@ -784,23 +782,11 @@ void USART_UDRE_Callback(void (*USART_UDRE_User_ptr) (void));
 void Disable_Interrupt();
 void EEPROM_Write_Data(uint_16 address,uint_8 data);
 uint_8 EEPROM_Read_Data(uint_16 address);
-# 26 ".././AVR_32_Driver.c" 2
-Led_Data Led_FW = {((GPIO_Register *) ((0x13)+(0x20))),PIN4,LOW};
+# 24 ".././AVR_32_Driver.c" 2
+
+
+
 int main ()
 {
- Led_Start(Led_FW);
- EEPROM_Write_Data(44,0x31);
- EEPROM_Write_Data(44,0x30);
- if (EEPROM_Read_Data(44)==0X30)
- {
-  Led_State_Control(Led_FW,HIGH);
- }
- else
- {
-  Led_State_Control(Led_FW,LOW);
- }
- while(1)
- {
 
- }
 }
