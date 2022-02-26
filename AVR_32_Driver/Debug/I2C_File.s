@@ -252,6 +252,7 @@ TWI_Write_Byte:
 	andi r24,lo8(-8)
 	cpi r24,lo8(40)
 	brne .L33
+/* epilogue start */
 	.loc 1 94 0
 	ret
 	.cfi_endproc
@@ -280,17 +281,17 @@ TWI_Read_Byte:
 	in r24,0x36
 	ori r24,lo8(-128)
 	out 0x36,r24
-.L37:
+.L36:
 	.loc 1 101 0 discriminator 1
 	in __tmp_reg__,0x36
 	sbrs __tmp_reg__,7
-	rjmp .L37
-.L39:
+	rjmp .L36
+.L38:
 	.loc 1 102 0 discriminator 1
 	in r24,0x1
 	andi r24,lo8(-8)
 	cpi r24,lo8(-128)
-	brne .L39
+	brne .L38
 	.loc 1 103 0
 	in r24,0x2
 	.loc 1 104 0
@@ -321,16 +322,16 @@ TWI_Stop:
 	in r24,0x36
 	ori r24,lo8(16)
 	out 0x36,r24
-.L42:
+.L41:
 	.loc 1 111 0 discriminator 1
 	in __tmp_reg__,0x36
 	sbrs __tmp_reg__,7
-	rjmp .L42
-.L44:
+	rjmp .L41
+.L43:
 	.loc 1 112 0 discriminator 1
 	in __tmp_reg__,0x36
 	sbrc __tmp_reg__,4
-	rjmp .L44
+	rjmp .L43
 /* epilogue start */
 	.loc 1 113 0
 	ret
@@ -365,15 +366,15 @@ TWI_1:
 	.file 3 "../MCAL/CommuncationProtocols/I2C_File.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x251
+	.long	0x24d
 	.word	0x2
 	.long	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.long	.LASF40
-	.byte	0x1
 	.long	.LASF41
+	.byte	0x1
 	.long	.LASF42
+	.long	.LASF43
 	.long	.Ldebug_ranges0+0
 	.long	0
 	.long	0
@@ -607,13 +608,12 @@ TWI_1:
 	.long	0x29
 	.long	.LLST5
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xb
 	.byte	0x1
-	.long	.LASF43
+	.long	.LASF39
 	.byte	0x1
 	.byte	0x57
 	.byte	0x1
-	.long	0x29
 	.long	.LFB2
 	.long	.LFE2
 	.byte	0x3
@@ -621,15 +621,15 @@ TWI_1:
 	.uleb128 0x20
 	.sleb128 2
 	.byte	0x1
-	.long	0x214
+	.long	0x210
 	.uleb128 0x9
-	.long	.LASF39
+	.long	.LASF40
 	.byte	0x1
 	.byte	0x57
 	.long	0x29
 	.long	.LLST6
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xc
 	.byte	0x1
 	.long	.LASF44
 	.byte	0x1
@@ -642,7 +642,7 @@ TWI_1:
 	.uleb128 0x20
 	.sleb128 2
 	.byte	0x1
-	.uleb128 0xe
+	.uleb128 0xd
 	.byte	0x1
 	.long	.LASF45
 	.byte	0x1
@@ -654,7 +654,7 @@ TWI_1:
 	.uleb128 0x20
 	.sleb128 2
 	.byte	0x1
-	.uleb128 0xf
+	.uleb128 0xe
 	.long	.LASF46
 	.byte	0x1
 	.byte	0xa
@@ -843,7 +843,7 @@ TWI_1:
 	.byte	0
 	.uleb128 0xc
 	.uleb128 0x2e
-	.byte	0x1
+	.byte	0
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3
@@ -852,8 +852,6 @@ TWI_1:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x11
@@ -864,8 +862,6 @@ TWI_1:
 	.uleb128 0xa
 	.uleb128 0x2117
 	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0xd
@@ -879,8 +875,6 @@ TWI_1:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
@@ -892,27 +886,6 @@ TWI_1:
 	.byte	0
 	.byte	0
 	.uleb128 0xe
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x40
-	.uleb128 0xa
-	.uleb128 0x2117
-	.uleb128 0xc
-	.byte	0
-	.byte	0
-	.uleb128 0xf
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1149,7 +1122,7 @@ TWI_1:
 	.string	"TWI_Stop"
 .LASF25:
 	.string	"Slave_Transmitter"
-.LASF42:
+.LASF43:
 	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF38:
 	.string	"SLA_Value"
@@ -1173,13 +1146,13 @@ TWI_1:
 	.string	"TWI_Interrupt_status"
 .LASF29:
 	.string	"Presaler_Val"
-.LASF39:
+.LASF40:
 	.string	"T_Data"
 .LASF33:
 	.string	"TWSR_Temp"
 .LASF1:
 	.string	"unsigned char"
-.LASF40:
+.LASF41:
 	.string	"GNU C 4.8.1 -fpreprocessed -mmcu=atmega32 -g2 -O3 -std=gnu99 -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -fpack-struct -fshort-enums"
 .LASF15:
 	.string	"uint_8"
@@ -1191,7 +1164,7 @@ TWI_1:
 	.string	"long long unsigned int"
 .LASF44:
 	.string	"TWI_Read_Byte"
-.LASF43:
+.LASF39:
 	.string	"TWI_Write_Byte"
 .LASF18:
 	.string	"TWI_Enabled"
@@ -1221,7 +1194,7 @@ TWI_1:
 	.string	"Master_Transmitter"
 .LASF26:
 	.string	"Slave_Receiver"
-.LASF41:
+.LASF42:
 	.string	"../MCAL/CommuncationProtocols/I2C_File.c"
 	.ident	"GCC: (AVR_8_bit_GNU_Toolchain_3.4.5_1522) 4.8.1"
 .global __do_copy_data

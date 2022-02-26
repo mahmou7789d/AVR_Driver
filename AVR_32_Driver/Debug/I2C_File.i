@@ -176,7 +176,7 @@ extern TWi_Micro_data TWI_1;
 void TWI_INIT(uint_8 SCL_F);
 void TWI_Start(uint_8 SLA_Value);
 void TWI_Stop ();
-uint_8 TWI_Write_Byte(uint_8 T_Data);
+void TWI_Write_Byte(uint_8 T_Data);
 uint_8 TWI_Read_Byte();
 # 9 "../MCAL/CommuncationProtocols/I2C_File.c" 2
 
@@ -257,7 +257,7 @@ void TWI_Start(uint_8 SLA_Value)
        break;
  }
 }
-uint_8 TWI_Write_Byte(uint_8 T_Data)
+void TWI_Write_Byte(uint_8 T_Data)
 {
  (*(volatile uint_8 *)((0x03)+(0x20))) = T_Data;
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));

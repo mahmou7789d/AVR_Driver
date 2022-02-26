@@ -4,7 +4,7 @@
 # 1 "../MCAL/EEPROM/EEPROM.c"
 # 9 "../MCAL/EEPROM/EEPROM.c"
 # 1 "../MCAL/EEPROM/EEPROM.h" 1
-# 12 "../MCAL/EEPROM/EEPROM.h"
+# 43 "../MCAL/EEPROM/EEPROM.h"
 # 1 "../MCAL/DIO/GPIO.h" 1
 # 10 "../MCAL/DIO/GPIO.h"
 # 1 "../MCAL/DIO/AVR32_Chip_Confg.h" 1
@@ -95,7 +95,7 @@ uint_8 GPIO_Port_Read (GPIO_Register *Chip_port);
 void GPIO_Write_High_Nibble(uint_8 Port_Name,uint_8 High_Nibble_value);
 void GPIO_Write_Low_Nibble(uint_8 Port_Name,uint_8 Low_Nibble_value);
 void GPIO_Pin_Enable_PULLUP_RES(GPIO_Register *Chip_port,GPIO_pin_number pin_num,Pull_UP_RES_State Pull_Up);
-# 13 "../MCAL/EEPROM/EEPROM.h" 2
+# 44 "../MCAL/EEPROM/EEPROM.h" 2
 # 1 "../MCAL/Interrupt/Interrupt.h" 1
 # 95 "../MCAL/Interrupt/Interrupt.h"
     typedef enum
@@ -115,11 +115,36 @@ void GPIO_Pin_Enable_PULLUP_RES(GPIO_Register *Chip_port,GPIO_pin_number pin_num
  extern void (* EXT_INT1_ISR) (void);
  extern void (* EXT_INT2_ISR) (void);
  void EXTINT_InterruptInit(EXInterrupt_Source source,ExInterrupt_Modes Mode);
-# 14 "../MCAL/EEPROM/EEPROM.h" 2
+# 45 "../MCAL/EEPROM/EEPROM.h" 2
 
 
 void Disable_Interrupt();
 void EEPROM_Write_Data(uint_16 address,uint_8 data);
-
 uint_8 EEPROM_Read_Data(uint_16 address);
-# 9 "../MCAL/EEPROM/EEPROM.c" 2
+# 10 "../MCAL/EEPROM/EEPROM.c" 2
+
+
+
+
+void Disable_Interrupt()
+{
+ if(( (((*(volatile uint_8 *)((0x3F) + (0x20)))) & (1<<((7))) ) >> ((7))))
+ {
+  ((*(volatile uint_8 *)((0x3F) + (0x20))) &= ~(1<<(7)));
+ }
+}
+void EEPROM_Write_Data(uint_16 address,uint_8 data)
+{
+ (*(volatile uint_16 *) ((0x1E) + (0x20))) = address;
+ (*(volatile uint8 *) ((0x1D) + (0x20))) = data;
+ Disable_Interrupt();
+ ((*(volatile uint_8 *) ((0x1C) + (0x20))) |= (1<<(2)));
+ ((*(volatile uint_8 *) ((0x1C) + (0x20))) |= (1<<(1)));
+ while(( (((*(volatile uint_8 *) ((0x1C) + (0x20)))) & (1<<((1))) ) >> ((1)))==1);
+}
+uint_8 EEPROM_Read_Data(uint_16 address)
+{
+ (*(volatile uint_16 *) ((0x1E) + (0x20))) = address;
+ ((*(volatile uint_8 *) ((0x1C) + (0x20))) |= (1<<(0)));
+ return (*(volatile uint8 *) ((0x1D) + (0x20)));
+}

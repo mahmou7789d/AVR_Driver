@@ -773,24 +773,34 @@ void USART_TXC_Complete_Callback(void (*USART_TXC_Complete_User_ptr) (void));
 void USART_UDRE_Callback(void (*USART_UDRE_User_ptr) (void));
 # 22 ".././AVR_32_Driver.c" 2
 
-int main(void)
+
+
+# 1 "../MCAL/EEPROM/EEPROM.h" 1
+# 44 "../MCAL/EEPROM/EEPROM.h"
+# 1 "../MCAL/Interrupt/Interrupt.h" 1
+# 45 "../MCAL/EEPROM/EEPROM.h" 2
+
+
+void Disable_Interrupt();
+void EEPROM_Write_Data(uint_16 address,uint_8 data);
+uint_8 EEPROM_Read_Data(uint_16 address);
+# 26 ".././AVR_32_Driver.c" 2
+Led_Data Led_FW = {((GPIO_Register *) ((0x13)+(0x20))),PIN4,LOW};
+int main ()
 {
-
-
-
-
-
-
- Game_Init_System();
- Game_Playing_System();
-
-
-
+ Led_Start(Led_FW);
+ EEPROM_Write_Data(44,0x31);
+ EEPROM_Write_Data(44,0x30);
+ if (EEPROM_Read_Data(44)==0X30)
+ {
+  Led_State_Control(Led_FW,HIGH);
+ }
+ else
+ {
+  Led_State_Control(Led_FW,LOW);
+ }
  while(1)
  {
 
-
-
  }
-# 69 ".././AVR_32_Driver.c"
 }

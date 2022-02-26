@@ -73,7 +73,7 @@ extern TWi_Micro_data TWI_1;
 void TWI_INIT(uint_8 SCL_F);
 void TWI_Start(uint_8 SLA_Value);
 void TWI_Stop ();
-uint_8 TWI_Write_Byte(uint_8 T_Data);
+void TWI_Write_Byte(uint_8 T_Data);
 uint_8 TWI_Read_Byte();
 
 #endif /* I2C_FILE_H_ */

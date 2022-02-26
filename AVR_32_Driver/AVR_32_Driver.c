@@ -8,7 +8,7 @@
 #include <GPIO.h>
 #include <util/delay.h>
 #include <Timer0.h>
-#include <LED.h>
+
 #include <Interrupt.h>
 #include <Timer_CTC_APP.h>
 #include <Timer_OC0_NonPWM.h>
@@ -19,7 +19,39 @@
 #include <Multi_7Segment.h>
 #include <RealTimeClock.h>
 #include <USART_File.h>
+#include <LED.h>
+#include <EEPROM.h>
 
+
+
+
+
+
+/******************** EEPROM Application***************************
+Led_Data Led_FW = {Port_C,PIN4,LOW};
+int main ()
+{
+	Led_Start(Led_FW);
+	EEPROM_Write_Data(44,0x31);
+	EEPROM_Write_Data(44,0x30);
+	if (EEPROM_Read_Data(44)==0X30)
+	{
+		Led_State_Control(Led_FW,HIGH);
+	}
+	else 
+	{
+		Led_State_Control(Led_FW,LOW);
+	}
+	while(1)
+	{
+		
+	}
+}
+**********************************************************************/
+
+
+
+/*
 int main(void)
 {
 	
@@ -28,8 +60,8 @@ int main(void)
 	//Timer_NonInverting_FastPWM_Init();
 	//Timer_PhaseCorrect_Init();
 	//KeyPad_APP_init();
-	Game_Init_System();
-	Game_Playing_System();
+	//Game_Init_System();
+	//Game_Playing_System();
 	//Multi_7_Segment_Init_System();
 	//Real_Time_Init_System();
 	//Real_Time_control_System();
@@ -39,7 +71,6 @@ int main(void)
 		//Multi_7_Segment_Control_System();
 		//KeyPad_APP_Control();
 	}
-	/*
 	LCD_Init();
 	Send_String_LCD("Hello My Princess");
 	_delay_ms(1000);
@@ -50,13 +81,11 @@ int main(void)
 	Send_Command_LCD(Clear_Display);
 	_delay_ms(1000);
 	Send_String_LCD("I Love You");
-	*/
 	//Calculator_Init();
 	//LM35OnLCD_INIT(PIN0);
 	//ADC_APP_INIT();
 	//GPIO_APP_init();
 	//KeyPad_APP_init();
-	/*
 	while(1)
 	{
 		//Calculator_operation();
@@ -65,8 +94,9 @@ int main(void)
 		//ADC_APP_Control();
 		//_delay_ms(100);
 	}
-*/
+
 }
+*/
 
 
 /******************* Test code of GPIO Driver ****************************

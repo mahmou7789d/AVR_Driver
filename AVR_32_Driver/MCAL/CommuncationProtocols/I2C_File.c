@@ -84,7 +84,7 @@ void TWI_Start(uint_8 SLA_Value)
 		     break;
 	}
 }
-uint_8 TWI_Write_Byte(uint_8 T_Data)
+void TWI_Write_Byte(uint_8 T_Data)
 {
 	TWDR = T_Data;
 	SET_BIT(TWCR,TWEN_bit);

@@ -259,7 +259,7 @@ used this register in Interrupt initalization function
 /* the Other Bit is Reserved */
 
 /*The address of the EEPROM Data register */
-#define EEDR         (*(volatile uint8 *) (EEDR_ADDRESS + IO_MAPPED_OFFSET))
+#define EEDR         (*(volatile uint8 *) (EEDR_ADDRESS + IO_MAPPING_OFFSET))
 
 /************************************************************************************************ Timers Registers ***************************************************************************************************/
 
