@@ -54,9 +54,15 @@ HAL\Water_Level_Seneor\Water_Level_Seneor.c
 
 MCAL\ADC\ADC_File.c
 
+MCAL\CommuncationProtocols\I2C_File.c
+
+MCAL\CommuncationProtocols\SPI_File.c
+
 MCAL\CommuncationProtocols\USART_File.c
 
 MCAL\DIO\GPIO.c
+
+MCAL\EEPROM\EEPROM.c
 
 MCAL\Interrupt\Interrupt.c
 

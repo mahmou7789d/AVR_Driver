@@ -232,6 +232,34 @@ void Timer2_CompareMatch_Callback(void (*TIMER2_CompareMatch_User_ptr) (void))
  }
 }
 
+void __vector_10 (void) __attribute__ ((signal,used)) ; void __vector_10 (void)
+{
+ if (CP_TIMER0_CompareMatch_User_ptr != ((void *)(0X00)))
+ {
+  CP_TIMER0_CompareMatch_User_ptr();
+ }
+}
+void __vector_11 (void) __attribute__ ((signal,used)) ; void __vector_11 (void)
+{
+ if (CP_TIMER0_Overflow_User_ptr != ((void *)(0X00)))
+ {
+  CP_TIMER0_Overflow_User_ptr();
+ }
+}
+void __vector_5 (void) __attribute__ ((signal,used)) ; void __vector_5 (void)
+{
+ if (CP_TIMER2_Overflow_User_ptr != ((void *)(0X00)))
+ {
+  CP_TIMER2_Overflow_User_ptr();
+ }
+}
+void __vector_4 (void) __attribute__ ((signal,used)) ; void __vector_4 (void)
+{
+ if (CP_TIMER2_CompareMatch_User_ptr != ((void *)(0X00)))
+ {
+  CP_TIMER2_CompareMatch_User_ptr();
+ }
+}
 void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
 {
 
@@ -497,33 +525,4 @@ void TIMER_Delay(TIMER_DataType Timer_Details,uint_8 inital_Value)
    default:
    break;
   }
-}
-# 327 "../MCAL/Timer 0,2/Timer0.c"
-void __vector_10 (void) __attribute__ ((signal,used)) ; void __vector_10 (void)
-{
- if (CP_TIMER0_CompareMatch_User_ptr != ((void *)(0X00)))
- {
-  CP_TIMER0_CompareMatch_User_ptr();
- }
-}
-void __vector_11 (void) __attribute__ ((signal,used)) ; void __vector_11 (void)
-{
- if (CP_TIMER0_Overflow_User_ptr != ((void *)(0X00)))
- {
-  CP_TIMER0_Overflow_User_ptr();
- }
-}
-void __vector_5 (void) __attribute__ ((signal,used)) ; void __vector_5 (void)
-{
- if (CP_TIMER2_Overflow_User_ptr != ((void *)(0X00)))
- {
-  CP_TIMER2_Overflow_User_ptr();
- }
-}
-void __vector_4 (void) __attribute__ ((signal,used)) ; void __vector_4 (void)
-{
- if (CP_TIMER2_CompareMatch_User_ptr != ((void *)(0X00)))
- {
-  CP_TIMER2_CompareMatch_User_ptr();
- }
 }

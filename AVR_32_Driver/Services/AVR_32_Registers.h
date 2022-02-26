@@ -124,7 +124,64 @@ used this register in Interrupt initalization function
 #define INTF0_Bit        (7)
 #define SREG       (*(volatile uint_8 *)(SREG_ADDRESS   + IO_MAPPING_OFFSET))
 #define I_Bit   (7)
-/******************************************************************************************************************* USART In THe AVR ******************************************************************************************************************************/
+
+
+/**************************************************** SPI In THe AVR *************************************************************/
+#define  TWAR_ADDRESS   (0x02)
+#define  TWBR_ADDRESS   (0x00)
+#define  TWCR_ADDRESS   (0x36)
+#define  TWDR_ADDRESS   (0x03)
+#define  TWSR_ADDRESS   (0x01)
+
+
+/*I2c Control Register*/
+#define   TWAR      (*(volatile uint_8 *)(TWAR_ADDRESS+IO_MAPPING_OFFSET))
+#define   TWGCE_bit (0)
+#define   TWBR      (*(volatile uint_8 *)(TWBR_ADDRESS+IO_MAPPING_OFFSET))
+#define   TWCR      (*(volatile uint_8 *)(TWCR_ADDRESS+IO_MAPPING_OFFSET))
+#define   TWIE_bit  (0)
+#define   TWEN_bit  (2)
+#define   TWWC_bit  (3)
+#define   TWSTO_bit (4)
+#define   TWSTA_bit (5)
+#define   TWEA_bit  (6)
+#define   TWINT_bit (7)
+#define   TWDR      (*(volatile uint_8 *)(TWDR_ADDRESS+IO_MAPPING_OFFSET))
+#define   TWSR      (*(volatile uint_8 *)(TWSR_ADDRESS+IO_MAPPING_OFFSET))
+#define   TWPS0_bit (0)
+#define   TWPS1_bit (1)
+
+/**************************************************** SPI In THe AVR *************************************************************/
+#define  SPDR_ADDRESS   (0x0F)
+#define  SPSR_ADDRESS   (0x0E)
+#define  SPCR_ADDRESS   (0X0D)
+
+/*SPI Control Register*/
+#define  SPDR     (*(volatile uint_8 *)(SPDR_ADDRESS + IO_MAPPING_OFFSET))
+/*This bit causes the SPI interrupt to be executed*/
+#define  SPIE_bit (7)               //SPI Interrupt Enable
+/*This bit must be set to enable any SPI operations*/
+#define  SPE_bit  (6)               //SPI Enable
+/*This bit select which data word is transmitted first (LSB-MSB)*/
+#define  DORD_bit (5)               //Data Order
+/*This bit selects Master SPI mode when written to one*/
+#define  MSTR_bit (4)               //Master/Slave Select
+/*When this bit is written to one, SCK is high when idle*/
+#define  CPOL_bit (3)               //Clock Polarity
+#define  CPHA_bit (2)               //Clock Phase
+/*These two bits control the SCK rate of the device configured as a Master. SPR1 and SPR0 have no effect on the Slave.*/
+#define  SPR1_bit (1)               //SPI Clock Rate Select 1
+#define  SPR0_bit (0)               //SPI Clock Rate Select 0
+/**/
+#define  SPSR      (*(volatile uint_8 *)(SPSR_ADDRESS + IO_MAPPING_OFFSET))
+#define  SPIF_bit  (7)
+#define  WCOL_bit  (6)
+#define  SPI2X_bit (0)
+#define  SPCR      (*(volatile uint_8 *)(SPCR_ADDRESS + IO_MAPPING_OFFSET))
+#define  MSB_bit   (7)
+#define  LSB_bit   (7)
+
+/**************************************************** USART In THe AVR ***********************************************************/
 #define UCSRA_ADDRESS   (0x0B)
 #define UCSRB_ADDRESS   (0x0A)
 #define UCSRC_ADDRESS   (0x20)
@@ -133,9 +190,9 @@ used this register in Interrupt initalization function
 #define UDR_ADDRESS     (0x0C)
 /* Define The Value Of Address Of The UCSRA, UCSRB, UCSRC, UBRRH, UBRRL, UDR In C (The Mapped Address In RAM) */
 #define UCSRA    (*(volatile uint8 *)(UCSRA_ADDRESS + IO_MAPPING_OFFSET))
-#define RXC    (7)
-#define TXC    (6)
-#define UDRE   (5)
+#define RXC      (7)
+#define TXC      (6)
+#define UDRE     (5)
 /* Errors Flag FE for indicate the stop bit error
  * DOR data over right 
  * PE parity check detection 
@@ -177,6 +234,32 @@ used this register in Interrupt initalization function
 #define UBRRH    (*(volatile uint8 *)(UBRRH_ADDRESS + IO_MAPPING_OFFSET))
 #define UBRRL    (*(volatile uint8 *)(UBRRL_ADDRESS + IO_MAPPING_OFFSET))
 #define UDR      (*(volatile uint8 *)(UDR_ADDRESS   + IO_MAPPING_OFFSET))
+
+/************************************************** Internal EEPROM Register ********************************************/
+
+#define EEARH_ADDRESS         (0x1F)
+#define EEARL_ADDRESS         (0x1E)
+#define EEDR_ADDRESS          (0x1D)
+#define EECR_ADDRESS          (0x1C)
+
+/* The address of the EEPROM address register High bit it contain only bit 9/10 */
+#define EEARH        (*(volatile uint_8 *) (EEARH_ADDRESS + IO_MAPPING_OFFSET))
+/* The address of the EEPROM address register Low bit it contain bits from 0-7 */
+#define EEARL        (*(volatile uint_8 *) (EEARL_ADDRESS + IO_MAPPING_OFFSET))
+/* hold the 10 bits of the address */
+#define EEAR        (*(volatile uint_16 *) (EEARL_ADDRESS + IO_MAPPING_OFFSET))
+/* The address of the EEPROM Control register */
+#define EECR         (*(volatile uint_8 *) (EECR_ADDRESS + IO_MAPPING_OFFSET))
+
+/* the Control Register Bits */
+#define EERE_Bit   (0) /* EEPROM Read Enable Bit */
+#define EEWE_Bit   (1) /* EEPROM Write Enable Bit */
+#define EEMWE_Bit  (2) /* EEPROM Master Write Enable bit */
+#define EERIE_Bit  (3) /*Ready Interrupt Enable */
+/* the Other Bit is Reserved */
+
+/*The address of the EEPROM Data register */
+#define EEDR         (*(volatile uint8 *) (EEDR_ADDRESS + IO_MAPPED_OFFSET))
 
 /************************************************************************************************ Timers Registers ***************************************************************************************************/
 

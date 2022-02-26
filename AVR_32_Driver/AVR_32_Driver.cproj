@@ -122,6 +122,7 @@
       <Value>../APP/GameUsingTimer</Value>
       <Value>../APP/Multiplaxing_2SevenSegment</Value>
       <Value>../MCAL/CommuncationProtocols</Value>
+      <Value>../MCAL/EEPROM</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
@@ -294,6 +295,18 @@
     <Compile Include="MCAL\ADC\ADC_File.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\CommuncationProtocols\I2C_File.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\CommuncationProtocols\I2C_File.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\CommuncationProtocols\SPI_File.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\CommuncationProtocols\SPI_File.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MCAL\CommuncationProtocols\USART_File.c">
       <SubType>compile</SubType>
     </Compile>
@@ -307,6 +320,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\DIO\GPIO.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EEPROM\EEPROM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\EEPROM\EEPROM.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\Interrupt\Interrupt.c">
@@ -363,6 +382,7 @@
     <Folder Include="MCAL\Interrupt" />
     <Folder Include="MCAL\ADC" />
     <Folder Include="MCAL\CommuncationProtocols" />
+    <Folder Include="MCAL\EEPROM" />
     <Folder Include="MCAL\Timer 0,2" />
     <Folder Include="OS" />
     <Folder Include="Services" />

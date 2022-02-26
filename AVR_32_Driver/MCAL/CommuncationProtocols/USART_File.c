@@ -36,6 +36,27 @@ void USART_UDRE_Callback(void (*USART_UDRE_User_ptr) (void))
 	}
 }
 
+ISR (USART_RXC_vect)
+{
+	if ( CP_USART_RXC_Complete_User_ptr != NULL)
+	{
+		CP_USART_RXC_Complete_User_ptr();
+	}			 
+}			 
+ISR (USART_TXC_vect)
+{
+	if ( CP_USART_TXC_Complete_User_ptr != NULL)
+	{
+		CP_USART_TXC_Complete_User_ptr();	
+	}		 
+}	
+ISR (USART_UDRE_vect)
+{
+	if ( CP_USART_UDRE_User_ptr != NULL)
+	{
+		CP_USART_UDRE_User_ptr();
+	}	 
+}		
 
 /******************************************************************************/
 USART_Configuration USART0={0};
@@ -261,7 +282,7 @@ uint_16 USART_Receive_ByteOfData_Blocking()
 		}
 		else if (READ_BIT(UCSRA,DOR))
 		{
-			USART0.Error_Type = USART_DataOverRunError
+			USART0.Error_Type = USART_DataOverRunError;
 		}
 		else if (READ_BIT(UCSRA,PE))
 		{
@@ -290,7 +311,7 @@ uint_16 USART_Receive_ByteOfData_NonBlocking()
 			}
 			else if (READ_BIT(UCSRA,DOR))
 			{
-				USART0.Error_Type = USART_DataOverRunError
+				USART0.Error_Type = USART_DataOverRunError;
 			}
 			else if (READ_BIT(UCSRA,PE))
 			{

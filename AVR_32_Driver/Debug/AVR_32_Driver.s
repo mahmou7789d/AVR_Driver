@@ -19,11 +19,11 @@ main:
 /* frame size = 0 */
 /* stack size = 0 */
 .L__stack_usage = 0
-	.loc 1 34 0
-	call Real_Time_Init_System
+	.loc 1 31 0
+	call Game_Init_System
 .LVL0:
-	.loc 1 35 0
-	call Real_Time_control_System
+	.loc 1 32 0
+	call Game_Playing_System
 .LVL1:
 .L2:
 	rjmp .L2
@@ -32,7 +32,7 @@ main:
 	.size	main, .-main
 	.text
 .Letext0:
-	.file 2 "../APP/RealTimeClock/RealTimeClock.h"
+	.file 2 "../APP/GameUsingTimer/GameUsingTimer.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
 	.long	0xcc
@@ -126,7 +126,7 @@ main:
 	.byte	0x1
 	.long	.LASF16
 	.byte	0x2
-	.byte	0x10
+	.byte	0xd
 	.byte	0x1
 	.long	0xc4
 	.uleb128 0x7
@@ -135,7 +135,7 @@ main:
 	.byte	0x1
 	.long	.LASF17
 	.byte	0x2
-	.byte	0x11
+	.byte	0xe
 	.byte	0x1
 	.uleb128 0x7
 	.byte	0
@@ -284,28 +284,30 @@ main:
 	.string	"long long int"
 .LASF11:
 	.string	"unsigned int"
-.LASF13:
-	.string	".././AVR_32_Driver.c"
-.LASF12:
-	.string	"GNU C 4.8.1 -fpreprocessed -mmcu=atmega32 -g2 -O3 -std=gnu99 -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -fpack-struct -fshort-enums"
-.LASF4:
-	.string	"long long unsigned int"
-.LASF17:
-	.string	"Real_Time_control_System"
-.LASF1:
-	.string	"unsigned char"
 .LASF15:
 	.string	"main"
+.LASF3:
+	.string	"long unsigned int"
+.LASF17:
+	.string	"Game_Playing_System"
+.LASF4:
+	.string	"long long unsigned int"
+.LASF16:
+	.string	"Game_Init_System"
+.LASF13:
+	.string	".././AVR_32_Driver.c"
+.LASF1:
+	.string	"unsigned char"
+.LASF0:
+	.string	"char"
 .LASF14:
 	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF7:
 	.string	"long int"
-.LASF3:
-	.string	"long unsigned int"
 .LASF10:
 	.string	"double"
-.LASF16:
-	.string	"Real_Time_Init_System"
+.LASF12:
+	.string	"GNU C 4.8.1 -fpreprocessed -mmcu=atmega32 -g2 -O3 -std=gnu99 -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -fpack-struct -fshort-enums"
 .LASF2:
 	.string	"short unsigned int"
 .LASF5:
@@ -314,6 +316,4 @@ main:
 	.string	"float"
 .LASF6:
 	.string	"short int"
-.LASF0:
-	.string	"char"
 	.ident	"GCC: (AVR_8_bit_GNU_Toolchain_3.4.5_1522) 4.8.1"

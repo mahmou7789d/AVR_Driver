@@ -14,7 +14,8 @@ AVR_32_Driver.d AVR_32_Driver.o: .././AVR_32_Driver.c ../MCAL/DIO/GPIO.h \
  ../APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.h \
  ../APP/KeyPad_APP/KeyPad_APP.h ../APP/GameUsingTimer/GameUsingTimer.h \
  ../APP/Multiplaxing_2SevenSegment/Multi_7Segment.h \
- ../APP/RealTimeClock/RealTimeClock.h
+ ../APP/RealTimeClock/RealTimeClock.h \
+ ../MCAL/CommuncationProtocols/USART_File.h
 
 ../MCAL/DIO/GPIO.h:
 
@@ -59,3 +60,5 @@ c:\program\ files\ (x86)\atmel\atmel\ toolchain\avr8\ gcc\native\3.4.1061\avr8-g
 ../APP/Multiplaxing_2SevenSegment/Multi_7Segment.h:
 
 ../APP/RealTimeClock/RealTimeClock.h:
+
+../MCAL/CommuncationProtocols/USART_File.h:

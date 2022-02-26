@@ -87,7 +87,7 @@ typedef struct
 	USART_Character_Size          Character_Size;
 	USART_Frame_Control           Frame_Control;
 	USART_Clock_Parity            Clock_Parity;
- 	uint_16                       Baud_Rate:10;
+ 	uint_32                       Baud_Rate;
 	USART_ErrorsType              Error_Type;
 }USART_Configuration;
 

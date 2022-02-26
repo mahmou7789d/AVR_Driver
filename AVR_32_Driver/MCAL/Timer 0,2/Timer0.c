@@ -45,6 +45,34 @@ void Timer2_CompareMatch_Callback(void (*TIMER2_CompareMatch_User_ptr) (void))
 	}
 }
 
+ISR (TIMER0_COMP_vect)
+{
+	if (CP_TIMER0_CompareMatch_User_ptr != NULL)
+	{
+		CP_TIMER0_CompareMatch_User_ptr();
+	}
+}
+ISR (TIMER0_OVF_vect)
+{
+	if (CP_TIMER0_Overflow_User_ptr != NULL)
+	{
+		CP_TIMER0_Overflow_User_ptr();
+	}
+}
+ISR (TIMER2_OVF_vect)
+{
+	if (CP_TIMER2_Overflow_User_ptr != NULL)
+	{
+		CP_TIMER2_Overflow_User_ptr();
+	}
+}
+ISR (TIMER2_COMP_vect)
+{
+	if (CP_TIMER2_CompareMatch_User_ptr != NULL)
+	{
+		CP_TIMER2_CompareMatch_User_ptr();
+	}
+}
 void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
 {
 	/* make temporary Register To Hold The Initiate Value */
@@ -324,31 +352,3 @@ void __vector_10 (void)
 }
 */
 
-ISR (TIMER0_COMP_vect)
-{
-	if (CP_TIMER0_CompareMatch_User_ptr != NULL)
-	{
-		CP_TIMER0_CompareMatch_User_ptr();
-	}
-}
-ISR (TIMER0_OVF_vect)
-{
-	if (CP_TIMER0_Overflow_User_ptr != NULL)
-	{
-		CP_TIMER0_Overflow_User_ptr();
-	}
-}
-ISR (TIMER2_OVF_vect)
-{
-	if (CP_TIMER2_Overflow_User_ptr != NULL)
-	{
-		CP_TIMER2_Overflow_User_ptr();
-	}
-}
-ISR (TIMER2_COMP_vect)
-{
-	if (CP_TIMER2_CompareMatch_User_ptr != NULL)
-	{
-		CP_TIMER2_CompareMatch_User_ptr();
-	}
-}

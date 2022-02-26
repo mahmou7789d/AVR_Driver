@@ -18,7 +18,7 @@
 #include <GameUsingTimer.h>
 #include <Multi_7Segment.h>
 #include <RealTimeClock.h>
-
+#include <USART_File.h>
 
 int main(void)
 {
@@ -28,11 +28,11 @@ int main(void)
 	//Timer_NonInverting_FastPWM_Init();
 	//Timer_PhaseCorrect_Init();
 	//KeyPad_APP_init();
-	//Game_Init_System();
-	//Game_Playing_System();
+	Game_Init_System();
+	Game_Playing_System();
 	//Multi_7_Segment_Init_System();
-	Real_Time_Init_System();
-	Real_Time_control_System();
+	//Real_Time_Init_System();
+	//Real_Time_control_System();
 	while(1)
 	{
 		
