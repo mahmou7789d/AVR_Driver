@@ -671,8 +671,8 @@ USART_Init:
 	movw r20,r24
 	ldi r22,0
 	ldi r23,lo8(36)
-	ldi r24,lo8(116)
-	ldi r25,lo8(75)
+	ldi r24,lo8(-12)
+	ldi r25,lo8(74)
 	call __divsf3
 .LVL21:
 	ldi r18,0
@@ -745,8 +745,8 @@ USART_Init:
 	movw r20,r24
 	ldi r22,0
 	ldi r23,lo8(36)
-	ldi r24,lo8(116)
-	ldi r25,lo8(75)
+	ldi r24,lo8(-12)
+	ldi r25,lo8(74)
 	call __divsf3
 .LVL27:
 	ldi r18,0
@@ -904,8 +904,8 @@ USART_Init:
 	movw r20,r24
 	ldi r22,0
 	ldi r23,lo8(36)
-	ldi r24,lo8(116)
-	ldi r25,lo8(75)
+	ldi r24,lo8(-12)
+	ldi r25,lo8(74)
 	call __divsf3
 .LVL42:
 	ldi r18,0
@@ -2878,7 +2878,7 @@ CP_USART_RXC_Complete_User_ptr:
 	.byte	0xf4
 	.uleb128 0x29
 	.byte	0x4
-	.long	0x4b742400
+	.long	0x4af42400
 	.byte	0x3
 	.long	USART0+7
 	.byte	0x6
@@ -2925,7 +2925,7 @@ CP_USART_RXC_Complete_User_ptr:
 	.byte	0xf4
 	.uleb128 0x29
 	.byte	0x4
-	.long	0x4b742400
+	.long	0x4af42400
 	.byte	0x3
 	.long	USART0+7
 	.byte	0x6

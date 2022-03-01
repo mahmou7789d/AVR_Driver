@@ -137,9 +137,9 @@ Real_Time_Init_System:
 .LBB41:
 	.file 2 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h"
 	.loc 2 163 0
-	ldi r18,lo8(319999)
-	ldi r24,hi8(319999)
-	ldi r25,hlo8(319999)
+	ldi r18,lo8(159999)
+	ldi r24,hi8(159999)
+	ldi r25,hlo8(159999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -220,9 +220,9 @@ Real_Time_control_System:
 .LBB42:
 .LBB43:
 	.loc 2 163 0
-	ldi r18,lo8(959999)
-	ldi r24,hi8(959999)
-	ldi r25,hlo8(959999)
+	ldi r18,lo8(479999)
+	ldi r24,hi8(479999)
+	ldi r25,hlo8(479999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -257,9 +257,9 @@ Real_Time_control_System:
 .LBB44:
 .LBB45:
 	.loc 2 163 0
-	ldi r18,lo8(959999)
-	ldi r24,hi8(959999)
-	ldi r25,hlo8(959999)
+	ldi r18,lo8(479999)
+	ldi r24,hi8(479999)
+	ldi r25,hlo8(479999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -294,9 +294,9 @@ Real_Time_control_System:
 .LBB46:
 .LBB47:
 	.loc 2 163 0
-	ldi r18,lo8(959999)
-	ldi r24,hi8(959999)
-	ldi r25,hlo8(959999)
+	ldi r18,lo8(479999)
+	ldi r24,hi8(479999)
+	ldi r25,hlo8(479999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -323,8 +323,8 @@ Real_Time_control_System:
 .LBB48:
 .LBB49:
 	.loc 2 163 0
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -339,9 +339,9 @@ Real_Time_control_System:
 .LBB50:
 .LBB51:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -376,9 +376,9 @@ Real_Time_control_System:
 .LBB52:
 .LBB53:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -413,9 +413,9 @@ Real_Time_control_System:
 .LBB54:
 .LBB55:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -442,8 +442,8 @@ Real_Time_control_System:
 .LBB56:
 .LBB57:
 	.loc 2 163 0
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -458,9 +458,9 @@ Real_Time_control_System:
 .LBB58:
 .LBB59:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -495,9 +495,9 @@ Real_Time_control_System:
 .LBB60:
 .LBB61:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -532,9 +532,9 @@ Real_Time_control_System:
 .LBB62:
 .LBB63:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -561,8 +561,8 @@ Real_Time_control_System:
 .LBB64:
 .LBB65:
 	.loc 2 163 0
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -637,8 +637,8 @@ Real_Time_control_System:
 .LBB66:
 .LBB67:
 	.loc 2 163 0
-	ldi r24,lo8(19999)
-	ldi r25,hi8(19999)
+	ldi r24,lo8(9999)
+	ldi r25,hi8(9999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -703,8 +703,8 @@ Real_Time_control_System:
 .LBB68:
 .LBB69:
 	.loc 2 163 0
-	ldi r24,lo8(19999)
-	ldi r25,hi8(19999)
+	ldi r24,lo8(9999)
+	ldi r25,hi8(9999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -773,8 +773,8 @@ Real_Time_control_System:
 .LBB70:
 .LBB71:
 	.loc 2 163 0
-	ldi r24,lo8(19999)
-	ldi r25,hi8(19999)
+	ldi r24,lo8(9999)
+	ldi r25,hi8(9999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -839,8 +839,8 @@ Real_Time_control_System:
 .LBB72:
 .LBB73:
 	.loc 2 163 0
-	ldi r24,lo8(19999)
-	ldi r25,hi8(19999)
+	ldi r24,lo8(9999)
+	ldi r25,hi8(9999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -909,8 +909,8 @@ Real_Time_control_System:
 .LBB74:
 .LBB75:
 	.loc 2 163 0
-	ldi r24,lo8(19999)
-	ldi r25,hi8(19999)
+	ldi r24,lo8(9999)
+	ldi r25,hi8(9999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1003,9 +1003,9 @@ Real_Time_control_System:
 .LBB76:
 .LBB77:
 	.loc 2 163 0
-	ldi r25,lo8(959999)
-	ldi r18,hi8(959999)
-	ldi r24,hlo8(959999)
+	ldi r25,lo8(479999)
+	ldi r18,hi8(479999)
+	ldi r24,hlo8(479999)
 	1: subi r25,1
 	sbci r18,0
 	sbci r24,0
@@ -1662,10 +1662,10 @@ counter_app_3:
 	.uleb128 0x19
 	.long	0x3b5
 	.byte	0x4
-	.long	0x49c35000
+	.long	0x49435000
 	.uleb128 0x1a
 	.long	0x3c0
-	.long	0x186a00
+	.long	0xc3500
 	.byte	0
 	.byte	0
 	.uleb128 0x1b
@@ -4356,7 +4356,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST3:
@@ -4364,7 +4364,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4383,7 +4383,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST6:
@@ -4391,7 +4391,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4410,7 +4410,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST9:
@@ -4418,7 +4418,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4437,7 +4437,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.long	0
 	.long	0
 .LLST12:
@@ -4445,7 +4445,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x4
 	.byte	0xa
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4464,7 +4464,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST15:
@@ -4472,7 +4472,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4491,7 +4491,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST18:
@@ -4499,7 +4499,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4518,7 +4518,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST21:
@@ -4526,7 +4526,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4545,7 +4545,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.long	0
 	.long	0
 .LLST24:
@@ -4553,7 +4553,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x4
 	.byte	0xa
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4572,7 +4572,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST27:
@@ -4580,7 +4580,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4599,7 +4599,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST30:
@@ -4607,7 +4607,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4626,7 +4626,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST33:
@@ -4634,7 +4634,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4653,7 +4653,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.long	0
 	.long	0
 .LLST36:
@@ -4661,7 +4661,7 @@ counter_app_3:
 	.long	.LVL34
 	.word	0x4
 	.byte	0xa
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4686,27 +4686,27 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	.LVL81
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	0
 	.long	0
 .LLST39:
 	.long	.LVL41
 	.long	.LVL77
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	.LVL81
 	.long	.LFE7
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4731,27 +4731,27 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	.LVL81
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	0
 	.long	0
 .LLST42:
 	.long	.LVL48
 	.long	.LVL77
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	.LVL81
 	.long	.LFE7
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4776,27 +4776,27 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	.LVL81
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	0
 	.long	0
 .LLST45:
 	.long	.LVL55
 	.long	.LVL77
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	.LVL81
 	.long	.LFE7
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4821,27 +4821,27 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	.LVL81
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	0
 	.long	0
 .LLST48:
 	.long	.LVL62
 	.long	.LVL77
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	.LVL81
 	.long	.LFE7
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4866,27 +4866,27 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	.LVL81
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x479c4000
+	.long	0x471c4000
 	.long	0
 	.long	0
 .LLST51:
 	.long	.LVL69
 	.long	.LVL77
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	.LVL81
 	.long	.LFE7
-	.word	0x6
-	.byte	0xc
-	.long	0x13880
+	.word	0x4
+	.byte	0xa
+	.word	0x9c40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -4905,7 +4905,7 @@ counter_app_3:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a927c00
+	.long	0x4a127c00
 	.long	0
 	.long	0
 .LLST54:
@@ -4913,7 +4913,7 @@ counter_app_3:
 	.long	.LVL81
 	.word	0x6
 	.byte	0xc
-	.long	0x493e00
+	.long	0x249f00
 	.byte	0x9f
 	.long	0
 	.long	0

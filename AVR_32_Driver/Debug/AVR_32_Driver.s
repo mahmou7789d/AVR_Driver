@@ -19,18 +19,23 @@ main:
 /* frame size = 0 */
 /* stack size = 0 */
 .L__stack_usage = 0
+	.loc 1 29 0
+	call ICU_Init_System
+.LVL0:
 	.loc 1 30 0
-	ldi r24,0
-	ldi r25,0
-	ret
+	call ICU_Control_System
+.LVL1:
+.L2:
+	rjmp .L2
 	.cfi_endproc
 .LFE6:
 	.size	main, .-main
 	.text
 .Letext0:
+	.file 2 "../APP/Timer_APP/ICU_Timer1/ICU.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x9a
+	.long	0xcb
 	.word	0x2
 	.long	.Ldebug_abbrev0
 	.byte	0x4
@@ -108,6 +113,31 @@ main:
 	.uleb128 0x20
 	.sleb128 2
 	.byte	0x1
+	.long	0xb4
+	.uleb128 0x5
+	.long	.LVL0
+	.long	0xb4
+	.uleb128 0x5
+	.long	.LVL1
+	.long	0xc3
+	.byte	0
+	.uleb128 0x6
+	.byte	0x1
+	.long	.LASF16
+	.byte	0x2
+	.byte	0xd
+	.byte	0x1
+	.long	0xc3
+	.uleb128 0x7
+	.byte	0
+	.uleb128 0x8
+	.byte	0x1
+	.long	.LASF17
+	.byte	0x2
+	.byte	0xe
+	.byte	0x1
+	.uleb128 0x7
+	.byte	0
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -156,7 +186,7 @@ main:
 	.byte	0
 	.uleb128 0x4
 	.uleb128 0x2e
-	.byte	0
+	.byte	0x1
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3
@@ -174,6 +204,54 @@ main:
 	.uleb128 0x40
 	.uleb128 0xa
 	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5
+	.uleb128 0x4109
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x8
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x3c
 	.uleb128 0xc
 	.byte	0
 	.byte	0
@@ -203,6 +281,8 @@ main:
 	.string	"long long int"
 .LASF11:
 	.string	"unsigned int"
+.LASF17:
+	.string	"ICU_Control_System"
 .LASF15:
 	.string	"main"
 .LASF3:
@@ -221,6 +301,8 @@ main:
 	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF7:
 	.string	"long int"
+.LASF16:
+	.string	"ICU_Init_System"
 .LASF10:
 	.string	"double"
 .LASF2:

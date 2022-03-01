@@ -93,9 +93,9 @@ KeyPad_APP_Control:
 .LBB5:
 	.file 2 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h"
 	.loc 2 163 0
-	ldi r18,lo8(639999)
-	ldi r24,hi8(639999)
-	ldi r25,hlo8(639999)
+	ldi r18,lo8(319999)
+	ldi r24,hi8(319999)
+	ldi r25,hlo8(319999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -999,7 +999,7 @@ keypad0:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x4a435000
+	.long	0x49c35000
 	.long	0
 	.long	0
 .LLST4:
@@ -1007,7 +1007,7 @@ keypad0:
 	.long	.LVL4
 	.word	0x6
 	.byte	0xc
-	.long	0x30d400
+	.long	0x186a00
 	.byte	0x9f
 	.long	0
 	.long	0

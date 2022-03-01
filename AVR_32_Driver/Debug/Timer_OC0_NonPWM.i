@@ -1,8 +1,8 @@
-# 1 "../APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c"
+# 1 "../APP/Timer_APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c"
 # 1 "C:\\Users\\Mahm Oud Sa Ad\\Downloads\\My-Github\\AVR_Driver\\AVR_32_Driver\\Debug//"
 # 1 "<command-line>"
-# 1 "../APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c"
-# 9 "../APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c"
+# 1 "../APP/Timer_APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c"
+# 9 "../APP/Timer_APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c"
 # 1 "../MCAL/Timer 0,2/Timer0.h" 1
 # 193 "../MCAL/Timer 0,2/Timer0.h"
 # 1 "../Services/AVR_32_Registers.h" 1
@@ -177,7 +177,7 @@ typedef struct
  OC_behavior OC_Pin_State;
 }TIMER_DataType;
 
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value);
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value);
 
 void Timer0_CompareMatch_Callback(void (*TIMER0_CompareMatch_User_ptr) (void));
 void Timer0_OverFlow_Callback(void (*TIMER0_Overflow_User_ptr) (void));
@@ -188,7 +188,7 @@ void Timer2_OverFlow_Callback(void (*TIMER2_Overflow_User_ptr) (void));
 void TIMER_Delay(TIMER_DataType Timer_Details,uint_8 inital_Value);
 void TIMER0_Preload_TCNT0(uint_8 TIMER0_TCNT0_val);
 void TIMER0_Preload_OCR0(float_32 TIMER0_OCR0_val);
-# 10 "../APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c" 2
+# 10 "../APP/Timer_APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.c" 2
 
 
 void Timer_OC0_NonPWM()

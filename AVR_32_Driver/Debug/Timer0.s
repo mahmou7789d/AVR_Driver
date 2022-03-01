@@ -1162,10 +1162,10 @@ CP_TIMER0_Overflow_User_ptr:
 	.long	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.long	.LASF90
-	.byte	0x1
 	.long	.LASF91
+	.byte	0x1
 	.long	.LASF92
+	.long	.LASF93
 	.long	.Ldebug_ranges0+0
 	.long	0
 	.long	0
@@ -1873,7 +1873,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.byte	0x8c
 	.sleb128 1
 	.uleb128 0x19
-	.long	.LASF82
+	.long	.LASF86
 	.byte	0x1
 	.word	0x148
 	.long	0x29
@@ -1881,7 +1881,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.byte	0x62
 	.byte	0
 	.uleb128 0x1a
-	.long	.LASF86
+	.long	.LASF87
 	.byte	0x1
 	.byte	0xc
 	.long	0x2db
@@ -1889,7 +1889,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.byte	0x3
 	.long	CP_TIMER0_Overflow_User_ptr
 	.uleb128 0x1a
-	.long	.LASF87
+	.long	.LASF88
 	.byte	0x1
 	.byte	0xd
 	.long	0x2db
@@ -1897,7 +1897,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.byte	0x3
 	.long	CP_TIMER0_CompareMatch_User_ptr
 	.uleb128 0x1a
-	.long	.LASF88
+	.long	.LASF89
 	.byte	0x1
 	.byte	0xf
 	.long	0x2db
@@ -1905,7 +1905,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.byte	0x3
 	.long	CP_TIMER2_Overflow_User_ptr
 	.uleb128 0x1a
-	.long	.LASF89
+	.long	.LASF90
 	.byte	0x1
 	.byte	0x10
 	.long	0x2db
@@ -1914,7 +1914,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.long	CP_TIMER2_CompareMatch_User_ptr
 	.uleb128 0x1b
 	.byte	0x1
-	.long	.LASF93
+	.long	.LASF94
 	.byte	0x4
 	.byte	0x2a
 	.byte	0x1
@@ -3678,7 +3678,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"CTC_mode"
 .LASF58:
 	.string	"inverting_mode"
-.LASF89:
+.LASF90:
 	.string	"CP_TIMER2_CompareMatch_User_ptr"
 .LASF75:
 	.string	"TIMER2_CompareMatch_User_ptr"
@@ -3694,7 +3694,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"Timer0"
 .LASF1:
 	.string	"uint8"
-.LASF92:
+.LASF93:
 	.string	"C:\\\\Users\\\\Mahm Oud Sa Ad\\\\Downloads\\\\My-Github\\\\AVR_Driver\\\\AVR_32_Driver\\\\Debug"
 .LASF57:
 	.string	"NON_inverting_mode"
@@ -3710,13 +3710,13 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"float"
 .LASF14:
 	.string	"GPIO_Register"
-.LASF93:
+.LASF94:
 	.string	"GPIO_Pin_Configuration"
 .LASF10:
 	.string	"long long int"
 .LASF43:
 	.string	"Clk_256"
-.LASF87:
+.LASF88:
 	.string	"CP_TIMER0_CompareMatch_User_ptr"
 .LASF9:
 	.string	"long int"
@@ -3726,9 +3726,9 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"Timer0_OverFlow_Callback"
 .LASF80:
 	.string	"TIMER_Init"
-.LASF86:
+.LASF87:
 	.string	"CP_TIMER0_Overflow_User_ptr"
-.LASF82:
+.LASF86:
 	.string	"inital_Value"
 .LASF32:
 	.string	"Normal_mode"
@@ -3740,7 +3740,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"PORT"
 .LASF3:
 	.string	"unsigned char"
-.LASF90:
+.LASF91:
 	.string	"GNU C 4.8.1 -fpreprocessed -mmcu=atmega32 -g2 -O3 -std=gnu99 -funsigned-char -funsigned-bitfields -ffunction-sections -fdata-sections -fpack-struct -fshort-enums"
 .LASF0:
 	.string	"uint_8"
@@ -3782,7 +3782,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"INPUT_Float"
 .LASF49:
 	.string	"Timer_No_Interrupt"
-.LASF91:
+.LASF92:
 	.string	"../MCAL/Timer 0,2/Timer0.c"
 .LASF39:
 	.string	"Clk_8"
@@ -3792,6 +3792,8 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"__vector_10"
 .LASF77:
 	.string	"__vector_11"
+.LASF82:
+	.string	"OCR_Value"
 .LASF5:
 	.string	"long unsigned int"
 .LASF74:
@@ -3814,7 +3816,7 @@ CP_TIMER0_Overflow_User_ptr:
 	.string	"No_Prescaling"
 .LASF65:
 	.string	"Timer_INT_source"
-.LASF88:
+.LASF89:
 	.string	"CP_TIMER2_Overflow_User_ptr"
 .LASF66:
 	.string	"OC_Pin_State"

@@ -568,7 +568,7 @@ _delay_ms(double __ms)
 
  uint32_t __ticks_dc;
  extern void __builtin_avr_delay_cycles(unsigned long);
- __tmp = (((16000000U)) / 1e3) * __ms;
+ __tmp = (((8000000U)) / 1e3) * __ms;
 # 160 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h" 3
   __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 
@@ -586,7 +586,7 @@ _delay_us(double __us)
 
  uint32_t __ticks_dc;
  extern void __builtin_avr_delay_cycles(unsigned long);
- __tmp = (((16000000U)) / 1e6) * __us;
+ __tmp = (((8000000U)) / 1e6) * __us;
 # 242 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h" 3
   __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 

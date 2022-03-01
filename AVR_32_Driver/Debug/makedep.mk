@@ -18,15 +18,17 @@ APP\Multiplaxing_2SevenSegment\Multi_7Segment.c
 
 APP\RealTimeClock\RealTimeClock.c
 
-APP\Timer_APP\Timer_APP.c
+APP\Timer_APP\ICU_Timer1\ICU.c
 
-APP\Timer_CTC_APP\Timer_CTC_APP.c
+APP\Timer_APP\Over_Flow\Timer_APP.c
 
-APP\TIMER_FastPWM\Timer_FastPWM.c
+APP\Timer_APP\Timer_CTC_APP\Timer_CTC_APP.c
 
-APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.c
+APP\Timer_APP\TIMER_FastPWM\Timer_FastPWM.c
 
-APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.c
+APP\Timer_APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.c
+
+APP\Timer_APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.c
 
 APP\Traffic_Light\Traffic_Light.c
 
@@ -67,4 +69,6 @@ MCAL\EEPROM\EEPROM.c
 MCAL\Interrupt\Interrupt.c
 
 MCAL\Timer 0,2\Timer0.c
+
+MCAL\Timer_1\Timer_1.c
 

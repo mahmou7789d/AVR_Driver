@@ -19,7 +19,7 @@ __zero_reg__ = 1
 	.type	Timer_Inverting_FastPWM_Init, @function
 Timer_Inverting_FastPWM_Init:
 .LFB0:
-	.file 1 "../APP/TIMER_FastPWM/Timer_FastPWM.c"
+	.file 1 "../APP/Timer_APP/TIMER_FastPWM/Timer_FastPWM.c"
 	.loc 1 14 0
 	.cfi_startproc
 	push r28
@@ -765,6 +765,8 @@ Timer_NonInverting_FastPWM_Init:
 	.string	"short int"
 .LASF51:
 	.string	"Timer_Inverting_FastPWM_Init"
+.LASF55:
+	.string	"../APP/Timer_APP/TIMER_FastPWM/Timer_FastPWM.c"
 .LASF16:
 	.string	"CTC_mode"
 .LASF41:
@@ -799,8 +801,6 @@ Timer_NonInverting_FastPWM_Init:
 	.string	"counter_3"
 .LASF37:
 	.string	"OC_Toggle"
-.LASF55:
-	.string	"../APP/TIMER_FastPWM/Timer_FastPWM.c"
 .LASF57:
 	.string	"TIMER_Init"
 .LASF15:

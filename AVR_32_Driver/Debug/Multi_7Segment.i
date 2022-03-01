@@ -205,7 +205,7 @@ typedef struct
  OC_behavior OC_Pin_State;
 }TIMER_DataType;
 
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value);
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value);
 
 void Timer0_CompareMatch_Callback(void (*TIMER0_CompareMatch_User_ptr) (void));
 void Timer0_OverFlow_Callback(void (*TIMER0_Overflow_User_ptr) (void));

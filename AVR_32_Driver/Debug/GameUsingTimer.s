@@ -92,9 +92,9 @@ Game_Init_System:
 .LBB7:
 	.file 2 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h"
 	.loc 2 163 0
-	ldi r18,lo8(319999)
-	ldi r24,hi8(319999)
-	ldi r25,hlo8(319999)
+	ldi r18,lo8(159999)
+	ldi r24,hi8(159999)
+	ldi r25,hlo8(159999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -192,9 +192,9 @@ Game_Playing_System:
 .LBB8:
 .LBB9:
 	.loc 2 163 0
-	ldi r24,lo8(319999)
-	ldi r25,hi8(319999)
-	ldi r18,hlo8(319999)
+	ldi r24,lo8(159999)
+	ldi r25,hi8(159999)
+	ldi r18,hlo8(159999)
 	1: subi r24,1
 	sbci r25,0
 	sbci r18,0
@@ -811,10 +811,10 @@ counter_app:
 	.uleb128 0x19
 	.long	0x36f
 	.byte	0x4
-	.long	0x49c35000
+	.long	0x49435000
 	.uleb128 0x1a
 	.long	0x37a
-	.long	0x186a00
+	.long	0xc3500
 	.byte	0
 	.byte	0
 	.uleb128 0x1b
@@ -1775,13 +1775,13 @@ counter_app:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x49c35000
+	.long	0x49435000
 	.long	.LVL10
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x49c35000
+	.long	0x49435000
 	.long	0
 	.long	0
 .LLST4:
@@ -1789,13 +1789,13 @@ counter_app:
 	.long	.LVL8
 	.word	0x6
 	.byte	0xc
-	.long	0x186a00
+	.long	0xc3500
 	.byte	0x9f
 	.long	.LVL10
 	.long	.LFE7
 	.word	0x6
 	.byte	0xc
-	.long	0x186a00
+	.long	0xc3500
 	.byte	0x9f
 	.long	0
 	.long	0

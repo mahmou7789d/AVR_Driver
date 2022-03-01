@@ -102,9 +102,9 @@ Butt_Switch_Read:
 .LBB5:
 	.file 2 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h"
 	.loc 2 163 0
-	ldi r18,lo8(159999)
-	ldi r24,hi8(159999)
-	ldi r25,hlo8(159999)
+	ldi r18,lo8(79999)
+	ldi r24,hi8(79999)
+	ldi r25,hlo8(79999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -1187,13 +1187,13 @@ Button_Default_State:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x49435000
+	.long	0x48c35000
 	.long	.LVL17
 	.long	.LFE7
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x49435000
+	.long	0x48c35000
 	.long	0
 	.long	0
 .LLST7:
@@ -1201,13 +1201,13 @@ Button_Default_State:
 	.long	.LVL14
 	.word	0x6
 	.byte	0xc
-	.long	0xc3500
+	.long	0x61a80
 	.byte	0x9f
 	.long	.LVL17
 	.long	.LFE7
 	.word	0x6
 	.byte	0xc
-	.long	0xc3500
+	.long	0x61a80
 	.byte	0x9f
 	.long	0
 	.long	0

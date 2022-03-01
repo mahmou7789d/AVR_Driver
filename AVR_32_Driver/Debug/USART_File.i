@@ -303,18 +303,18 @@ void USART_Init(void)
   (UCSRC_Temp &= ~(1<<(6)));
   (UCSRA_Temp &= ~(1<<(1)));
   (UCSRC_Temp &= ~(1<<(0)));
-  UBBR_Temp = ((float_32)(16000000U))/(16.0*USART0.Baud_Rate) - 0.5;
+  UBBR_Temp = ((float_32)(8000000U))/(16.0*USART0.Baud_Rate) - 0.5;
   break;
   case USART_Asyn_DoupleSpeed:
   (UCSRC_Temp &= ~(1<<(6)));
   (UCSRA_Temp |= (1<<(1)));
   (UCSRC_Temp &= ~(1<<(0)));
-  UBBR_Temp = ((float_32)(16000000U))/(8.0*USART0.Baud_Rate) - 0.5;
+  UBBR_Temp = ((float_32)(8000000U))/(8.0*USART0.Baud_Rate) - 0.5;
   break;
   case USART_Sync_Master:
   (UCSRC_Temp |= (1<<(6)));
   (UCSRA_Temp &= ~(1<<(1)));
-  UBBR_Temp = ((float_32)(16000000U))/(2.0*USART0.Baud_Rate) - 0.5;
+  UBBR_Temp = ((float_32)(8000000U))/(2.0*USART0.Baud_Rate) - 0.5;
   switch(USART0.Clock_Parity)
   {
    case USART_SamplingOnFaling:

@@ -176,7 +176,7 @@ typedef struct
  OC_behavior OC_Pin_State;
 }TIMER_DataType;
 
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value);
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value);
 
 void Timer0_CompareMatch_Callback(void (*TIMER0_CompareMatch_User_ptr) (void));
 void Timer0_OverFlow_Callback(void (*TIMER0_Overflow_User_ptr) (void));
@@ -686,7 +686,7 @@ _delay_ms(double __ms)
 
  uint32_t __ticks_dc;
  extern void __builtin_avr_delay_cycles(unsigned long);
- __tmp = (((16000000U)) / 1e3) * __ms;
+ __tmp = (((8000000U)) / 1e3) * __ms;
 # 160 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h" 3
   __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 
@@ -704,7 +704,7 @@ _delay_us(double __us)
 
  uint32_t __ticks_dc;
  extern void __builtin_avr_delay_cycles(unsigned long);
- __tmp = (((16000000U)) / 1e6) * __us;
+ __tmp = (((8000000U)) / 1e6) * __us;
 # 242 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h" 3
   __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 

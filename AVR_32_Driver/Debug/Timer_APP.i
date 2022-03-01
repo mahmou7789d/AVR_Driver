@@ -1,10 +1,10 @@
-# 1 "../APP/Timer_APP/Timer_APP.c"
+# 1 "../APP/Timer_APP/Over_Flow/Timer_APP.c"
 # 1 "C:\\Users\\Mahm Oud Sa Ad\\Downloads\\My-Github\\AVR_Driver\\AVR_32_Driver\\Debug//"
 # 1 "<command-line>"
-# 1 "../APP/Timer_APP/Timer_APP.c"
-# 9 "../APP/Timer_APP/Timer_APP.c"
-# 1 "../APP/Timer_APP/Timer_APP.h" 1
-# 11 "../APP/Timer_APP/Timer_APP.h"
+# 1 "../APP/Timer_APP/Over_Flow/Timer_APP.c"
+# 9 "../APP/Timer_APP/Over_Flow/Timer_APP.c"
+# 1 "../APP/Timer_APP/Over_Flow/Timer_APP.h" 1
+# 11 "../APP/Timer_APP/Over_Flow/Timer_APP.h"
 # 1 "../MCAL/Timer 0,2/Timer0.h" 1
 # 193 "../MCAL/Timer 0,2/Timer0.h"
 # 1 "../Services/AVR_32_Registers.h" 1
@@ -179,7 +179,7 @@ typedef struct
  OC_behavior OC_Pin_State;
 }TIMER_DataType;
 
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value);
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value);
 
 void Timer0_CompareMatch_Callback(void (*TIMER0_CompareMatch_User_ptr) (void));
 void Timer0_OverFlow_Callback(void (*TIMER0_Overflow_User_ptr) (void));
@@ -190,7 +190,7 @@ void Timer2_OverFlow_Callback(void (*TIMER2_Overflow_User_ptr) (void));
 void TIMER_Delay(TIMER_DataType Timer_Details,uint_8 inital_Value);
 void TIMER0_Preload_TCNT0(uint_8 TIMER0_TCNT0_val);
 void TIMER0_Preload_OCR0(float_32 TIMER0_OCR0_val);
-# 12 "../APP/Timer_APP/Timer_APP.h" 2
+# 12 "../APP/Timer_APP/Over_Flow/Timer_APP.h" 2
 # 1 "../HAL/LED_File/LED.h" 1
 # 13 "../HAL/LED_File/LED.h"
 typedef struct
@@ -212,10 +212,10 @@ typedef enum
  void Led_Toggle (Led_Data LED_init);
  void Led_Stop_FW (Led_Data LED_init);
  void Led_Stop_REV (Led_Data LED_init);
-# 13 "../APP/Timer_APP/Timer_APP.h" 2
+# 13 "../APP/Timer_APP/Over_Flow/Timer_APP.h" 2
 void Timer_APP_INIT();
 void Timer_APP_Control();
-# 10 "../APP/Timer_APP/Timer_APP.c" 2
+# 10 "../APP/Timer_APP/Over_Flow/Timer_APP.c" 2
 
 Led_Data LED_1 = {((GPIO_Register *) ((0x16)+(0x20))),PIN0,LED_FW_OFF};
 TIMER_DataType counter = {Normal_mode,Clk_1024};

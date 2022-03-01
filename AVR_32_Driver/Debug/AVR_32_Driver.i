@@ -494,7 +494,7 @@ _delay_ms(double __ms)
 
  uint32_t __ticks_dc;
  extern void __builtin_avr_delay_cycles(unsigned long);
- __tmp = (((16000000U)) / 1e3) * __ms;
+ __tmp = (((8000000U)) / 1e3) * __ms;
 # 160 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h" 3
   __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 
@@ -512,7 +512,7 @@ _delay_us(double __us)
 
  uint32_t __ticks_dc;
  extern void __builtin_avr_delay_cycles(unsigned long);
- __tmp = (((16000000U)) / 1e6) * __us;
+ __tmp = (((8000000U)) / 1e6) * __us;
 # 242 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h" 3
   __ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 
@@ -603,7 +603,7 @@ typedef struct
  OC_behavior OC_Pin_State;
 }TIMER_DataType;
 
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value);
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value);
 
 void Timer0_CompareMatch_Callback(void (*TIMER0_CompareMatch_User_ptr) (void));
 void Timer0_OverFlow_Callback(void (*TIMER0_Overflow_User_ptr) (void));
@@ -618,21 +618,21 @@ void TIMER0_Preload_OCR0(float_32 TIMER0_OCR0_val);
 
 # 1 "../MCAL/Interrupt/Interrupt.h" 1
 # 13 ".././AVR_32_Driver.c" 2
-# 1 "../APP/Timer_CTC_APP/Timer_CTC_APP.h" 1
-# 12 "../APP/Timer_CTC_APP/Timer_CTC_APP.h"
+# 1 "../APP/Timer_APP/Timer_CTC_APP/Timer_CTC_APP.h" 1
+# 12 "../APP/Timer_APP/Timer_CTC_APP/Timer_CTC_APP.h"
 void Timer_CTC_APP_Init();
 # 14 ".././AVR_32_Driver.c" 2
-# 1 "../APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.h" 1
-# 12 "../APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.h"
+# 1 "../APP/Timer_APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.h" 1
+# 12 "../APP/Timer_APP/Timer_OC0_NonPWM/Timer_OC0_NonPWM.h"
 void Timer_OC0_NonPWM();
 # 15 ".././AVR_32_Driver.c" 2
-# 1 "../APP/TIMER_FastPWM/Timer_FastPWM.h" 1
-# 13 "../APP/TIMER_FastPWM/Timer_FastPWM.h"
+# 1 "../APP/Timer_APP/TIMER_FastPWM/Timer_FastPWM.h" 1
+# 13 "../APP/Timer_APP/TIMER_FastPWM/Timer_FastPWM.h"
 void Timer_Inverting_FastPWM_Init();
 void Timer_NonInverting_FastPWM_Init();
 # 16 ".././AVR_32_Driver.c" 2
-# 1 "../APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.h" 1
-# 12 "../APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.h"
+# 1 "../APP/Timer_APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.h" 1
+# 12 "../APP/Timer_APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.h"
 void Timer_PhaseCorrect_Init();
 # 17 ".././AVR_32_Driver.c" 2
 # 1 "../APP/KeyPad_APP/KeyPad_APP.h" 1
@@ -783,10 +783,20 @@ void Disable_Interrupt();
 void EEPROM_Write_Data(uint_16 address,uint_8 data);
 uint_8 EEPROM_Read_Data(uint_16 address);
 # 24 ".././AVR_32_Driver.c" 2
-
+# 1 "../APP/Timer_APP/ICU_Timer1/ICU.h" 1
+# 13 "../APP/Timer_APP/ICU_Timer1/ICU.h"
+void ICU_Init_System();
+void ICU_Control_System();
+# 25 ".././AVR_32_Driver.c" 2
 
 
 int main ()
 {
+ ICU_Init_System();
+ ICU_Control_System();
+ while(1)
+ {
+
+ }
 
 }

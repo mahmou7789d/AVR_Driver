@@ -19,7 +19,7 @@ __zero_reg__ = 1
 	.type	Timer_PhaseCorrect_Init, @function
 Timer_PhaseCorrect_Init:
 .LFB0:
-	.file 1 "../APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.c"
+	.file 1 "../APP/Timer_APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.c"
 	.loc 1 14 0
 	.cfi_startproc
 	push r28
@@ -632,10 +632,12 @@ Timer_PhaseCorrect_Init:
 	.string	"short int"
 .LASF16:
 	.string	"CTC_mode"
-.LASF52:
-	.string	"../APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.c"
+.LASF41:
+	.string	"inverting_mode"
 .LASF18:
 	.string	"FastPWM_mode"
+.LASF52:
+	.string	"../APP/Timer_APP/Timer_PhaseCorrectPWM/Timer_PhaseCorrectPWM.c"
 .LASF43:
 	.string	"Set_upCount_Clear_DownCount"
 .LASF28:
@@ -684,8 +686,6 @@ Timer_PhaseCorrect_Init:
 	.string	"Timer_Number_Selection"
 .LASF4:
 	.string	"long long unsigned int"
-.LASF41:
-	.string	"inverting_mode"
 .LASF46:
 	.string	"Timer_mode"
 .LASF36:

@@ -181,7 +181,7 @@ typedef struct
  OC_behavior OC_Pin_State;
 }TIMER_DataType;
 
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value);
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value);
 
 void Timer0_CompareMatch_Callback(void (*TIMER0_CompareMatch_User_ptr) (void));
 void Timer0_OverFlow_Callback(void (*TIMER0_Overflow_User_ptr) (void));
@@ -260,7 +260,7 @@ void __vector_4 (void) __attribute__ ((signal,used)) ; void __vector_4 (void)
   CP_TIMER2_CompareMatch_User_ptr();
  }
 }
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value)
 {
 
     uint_8 TCCR_Temp = 0x00;
@@ -384,7 +384,7 @@ void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
   }
   (*(volatile uint_8 *)((0x33) + (0x20))) = TCCR_Temp;
   (*(volatile uint_8 *)((0x39) + (0x20))) = TIMSK_Temp;
-  (*(volatile uint_8 *)((0x3C) + (0x20))) = inital_Value;
+  (*(volatile uint_8 *)((0x3C) + (0x20))) = OCR_Value;
   break;
   case Timer2:
   switch(Timer_Details.Timer_mode)
@@ -507,7 +507,7 @@ void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
   }
   (*(volatile uint8 *) ((0x25) + (0x20))) = TCCR_Temp;
   (*(volatile uint_8 *)((0x39) + (0x20))) = TIMSK_Temp;
-  (*(volatile uint8 *)((0x23) +(0x20))) = inital_Value;
+  (*(volatile uint8 *)((0x23) +(0x20))) = OCR_Value;
   break;
  }
 }

@@ -24,9 +24,9 @@ LCD_Init:
 .LBB101:
 	.file 2 "c:\\program files (x86)\\atmel\\atmel toolchain\\avr8 gcc\\native\\3.4.1061\\avr8-gnu-toolchain\\avr\\include\\util\\delay.h"
 	.loc 2 163 0
-	ldi r18,lo8(639999)
-	ldi r24,hi8(639999)
-	ldi r25,hlo8(639999)
+	ldi r18,lo8(319999)
+	ldi r24,hi8(319999)
+	ldi r25,hlo8(319999)
 	1: subi r18,1
 	sbci r24,0
 	sbci r25,0
@@ -68,8 +68,8 @@ LCD_Init:
 .LBB102:
 .LBB103:
 	.loc 2 163 0
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -103,8 +103,8 @@ LCD_Init:
 .LBB108:
 .LBB109:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -121,8 +121,8 @@ LCD_Init:
 .LBB110:
 .LBB111:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -155,8 +155,8 @@ LCD_Init:
 .LBB114:
 .LBB115:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -173,8 +173,8 @@ LCD_Init:
 .LBB116:
 .LBB117:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -186,8 +186,8 @@ LCD_Init:
 .LBE112:
 .LBB118:
 .LBB119:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -199,8 +199,8 @@ LCD_Init:
 .LBE104:
 .LBB120:
 .LBB121:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -234,8 +234,8 @@ LCD_Init:
 .LBB126:
 .LBB127:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -252,8 +252,8 @@ LCD_Init:
 .LBB128:
 .LBB129:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -286,8 +286,8 @@ LCD_Init:
 .LBB132:
 .LBB133:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -304,8 +304,8 @@ LCD_Init:
 .LBB134:
 .LBB135:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -317,8 +317,8 @@ LCD_Init:
 .LBE130:
 .LBB136:
 .LBB137:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -330,8 +330,8 @@ LCD_Init:
 .LBE122:
 .LBB138:
 .LBB139:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -365,8 +365,8 @@ LCD_Init:
 .LBB144:
 .LBB145:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -383,8 +383,8 @@ LCD_Init:
 .LBB146:
 .LBB147:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -417,8 +417,8 @@ LCD_Init:
 .LBB150:
 .LBB151:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -435,8 +435,8 @@ LCD_Init:
 .LBB152:
 .LBB153:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -448,8 +448,8 @@ LCD_Init:
 .LBE148:
 .LBB154:
 .LBB155:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -461,8 +461,8 @@ LCD_Init:
 .LBE140:
 .LBB156:
 .LBB157:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -496,8 +496,8 @@ LCD_Init:
 .LBB162:
 .LBB163:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -514,8 +514,8 @@ LCD_Init:
 .LBB164:
 .LBB165:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -548,8 +548,8 @@ LCD_Init:
 .LBB168:
 .LBB169:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -566,8 +566,8 @@ LCD_Init:
 .LBB170:
 .LBB171:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -579,8 +579,8 @@ LCD_Init:
 .LBE166:
 .LBB172:
 .LBB173:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -592,8 +592,8 @@ LCD_Init:
 .LBE158:
 .LBB174:
 .LBB175:
-	ldi r24,lo8(-25537)
-	ldi r25,hi8(-25537)
+	ldi r24,lo8(19999)
+	ldi r25,hi8(19999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -646,8 +646,8 @@ Send_Command_LCD:
 .LBB194:
 .LBB195:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -664,8 +664,8 @@ Send_Command_LCD:
 .LBB196:
 .LBB197:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -700,8 +700,8 @@ Send_Command_LCD:
 .LBB200:
 .LBB201:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -718,8 +718,8 @@ Send_Command_LCD:
 .LBB202:
 .LBB203:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -731,8 +731,8 @@ Send_Command_LCD:
 .LBE198:
 .LBB204:
 .LBB205:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -789,8 +789,8 @@ Send_char_LCD:
 .LBB224:
 .LBB225:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -807,8 +807,8 @@ Send_char_LCD:
 .LBB226:
 .LBB227:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -843,8 +843,8 @@ Send_char_LCD:
 .LBB230:
 .LBB231:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -861,8 +861,8 @@ Send_char_LCD:
 .LBB232:
 .LBB233:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -874,8 +874,8 @@ Send_char_LCD:
 .LBE228:
 .LBB234:
 .LBB235:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -951,8 +951,8 @@ Move_Curser_LCD:
 .LBB272:
 .LBB273:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -969,8 +969,8 @@ Move_Curser_LCD:
 .LBB274:
 .LBB275:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1003,8 +1003,8 @@ Move_Curser_LCD:
 .LBB278:
 .LBB279:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1021,8 +1021,8 @@ Move_Curser_LCD:
 .LBB280:
 .LBB281:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1034,8 +1034,8 @@ Move_Curser_LCD:
 .LBE276:
 .LBB282:
 .LBB283:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1116,8 +1116,8 @@ Clear_LCD:
 .LBB306:
 .LBB307:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1134,8 +1134,8 @@ Clear_LCD:
 .LBB308:
 .LBB309:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1168,8 +1168,8 @@ Clear_LCD:
 .LBB312:
 .LBB313:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1186,8 +1186,8 @@ Clear_LCD:
 .LBB314:
 .LBB315:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1199,8 +1199,8 @@ Clear_LCD:
 .LBE310:
 .LBB316:
 .LBB317:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1212,8 +1212,8 @@ Clear_LCD:
 .LBE302:
 .LBB318:
 .LBB319:
-	ldi r24,lo8(-25537)
-	ldi r25,hi8(-25537)
+	ldi r24,lo8(19999)
+	ldi r25,hi8(19999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1284,8 +1284,8 @@ Send_String_LCD:
 .LBB340:
 .LBB341:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1302,8 +1302,8 @@ Send_String_LCD:
 .LBB342:
 .LBB343:
 	.loc 2 163 0
-	ldi r30,lo8(7999)
-	ldi r31,hi8(7999)
+	ldi r30,lo8(3999)
+	ldi r31,hi8(3999)
 	1: sbiw r30,1
 	brne 1b
 	rjmp .
@@ -1338,8 +1338,8 @@ Send_String_LCD:
 .LBB346:
 .LBB347:
 	.loc 2 163 0
-	ldi r24,lo8(7999)
-	ldi r25,hi8(7999)
+	ldi r24,lo8(3999)
+	ldi r25,hi8(3999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1356,8 +1356,8 @@ Send_String_LCD:
 .LBB348:
 .LBB349:
 	.loc 2 163 0
-	ldi r30,lo8(7999)
-	ldi r31,hi8(7999)
+	ldi r30,lo8(3999)
+	ldi r31,hi8(3999)
 	1: sbiw r30,1
 	brne 1b
 	rjmp .
@@ -1369,8 +1369,8 @@ Send_String_LCD:
 .LBE344:
 .LBB350:
 .LBB351:
-	ldi r24,lo8(3999)
-	ldi r25,hi8(3999)
+	ldi r24,lo8(1999)
+	ldi r25,hi8(1999)
 	1: sbiw r24,1
 	brne 1b
 	rjmp .
@@ -1671,10 +1671,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x4a435000
+	.long	0x49c35000
 	.uleb128 0x17
 	.long	0x190
-	.long	0x30d400
+	.long	0x186a00
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -1694,10 +1694,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -1734,10 +1734,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -1757,10 +1757,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -1839,10 +1839,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -1862,10 +1862,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -1937,10 +1937,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2045,10 +2045,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2085,10 +2085,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2108,10 +2108,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2190,10 +2190,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2213,10 +2213,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2288,10 +2288,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2397,10 +2397,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2437,10 +2437,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2460,10 +2460,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2542,10 +2542,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2565,10 +2565,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2640,10 +2640,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2748,10 +2748,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2788,10 +2788,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2811,10 +2811,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2893,10 +2893,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -2916,10 +2916,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -2991,10 +2991,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3098,10 +3098,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x481c4000
+	.long	0x479c4000
 	.uleb128 0x17
 	.long	0x190
-	.long	0x27100
+	.long	0x13880
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3238,10 +3238,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -3261,10 +3261,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3343,10 +3343,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -3366,10 +3366,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3441,10 +3441,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3602,10 +3602,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -3625,10 +3625,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3707,10 +3707,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -3730,10 +3730,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -3805,10 +3805,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -4307,10 +4307,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -4330,10 +4330,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -4412,10 +4412,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -4435,10 +4435,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -4510,10 +4510,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.uleb128 0x18
 	.long	0x190
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -4616,10 +4616,10 @@ Send_String_LCD:
 	.uleb128 0x16
 	.long	0x185
 	.byte	0x4
-	.long	0x481c4000
+	.long	0x479c4000
 	.uleb128 0x17
 	.long	0x190
-	.long	0x27100
+	.long	0x13880
 	.byte	0
 	.byte	0
 	.byte	0
@@ -5781,7 +5781,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST11:
@@ -5789,7 +5789,7 @@ Send_String_LCD:
 	.long	.LVL86
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -5808,7 +5808,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST14:
@@ -5816,7 +5816,7 @@ Send_String_LCD:
 	.long	.LVL86
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -5835,7 +5835,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST17:
@@ -5843,7 +5843,7 @@ Send_String_LCD:
 	.long	.LVL86
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -5862,7 +5862,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST20:
@@ -5870,7 +5870,7 @@ Send_String_LCD:
 	.long	.LVL86
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -5889,7 +5889,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.long	0
 	.long	0
 .LLST23:
@@ -5897,7 +5897,7 @@ Send_String_LCD:
 	.long	.LVL86
 	.word	0x4
 	.byte	0xa
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -5983,7 +5983,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST29:
@@ -5991,7 +5991,7 @@ Send_String_LCD:
 	.long	.LVL116
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -6010,7 +6010,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST32:
@@ -6018,7 +6018,7 @@ Send_String_LCD:
 	.long	.LVL116
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -6037,7 +6037,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST35:
@@ -6045,7 +6045,7 @@ Send_String_LCD:
 	.long	.LVL116
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -6064,7 +6064,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x46fa0000
+	.long	0x467a0000
 	.long	0
 	.long	0
 .LLST38:
@@ -6072,7 +6072,7 @@ Send_String_LCD:
 	.long	.LVL116
 	.word	0x4
 	.byte	0xa
-	.word	0x7d00
+	.word	0x3e80
 	.byte	0x9f
 	.long	0
 	.long	0
@@ -6091,7 +6091,7 @@ Send_String_LCD:
 	.word	0x6
 	.byte	0x9e
 	.uleb128 0x4
-	.long	0x467a0000
+	.long	0x45fa0000
 	.long	0
 	.long	0
 .LLST41:
@@ -6099,7 +6099,7 @@ Send_String_LCD:
 	.long	.LVL116
 	.word	0x4
 	.byte	0xa
-	.word	0x3e80
+	.word	0x1f40
 	.byte	0x9f
 	.long	0
 	.long	0

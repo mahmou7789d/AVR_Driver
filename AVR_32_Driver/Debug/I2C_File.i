@@ -101,7 +101,7 @@ void GPIO_Write_Low_Nibble(uint_8 Port_Name,uint_8 Low_Nibble_value);
 void GPIO_Pin_Enable_PULLUP_RES(GPIO_Register *Chip_port,GPIO_pin_number pin_num,Pull_UP_RES_State Pull_Up);
 # 9 "../MCAL/CommuncationProtocols/I2C_File.c" 2
 # 1 "../MCAL/CommuncationProtocols/I2C_File.h" 1
-# 21 "../MCAL/CommuncationProtocols/I2C_File.h"
+# 25 "../MCAL/CommuncationProtocols/I2C_File.h"
 typedef enum
 {
  Master_Transmitter,
@@ -153,14 +153,15 @@ typedef struct
 
 extern TWi_Micro_data TWI_1;
 
-
-
 void Set_SLA_Value(uint_8 address);
+void Write_address_For_Read(uint_8 address);
 void TWI_INIT(uint_32 SCL_F);
 void TWI_Start(uint_8 SLA_Value);
+void TWI_Repeated_Start(void);
 void TWI_Write_Byte(uint_8 T_Data);
 void TWI_Stop(void);
-uint_8 TWI_Read_Byte();
+uint_8 TWI_Read_Byte_Ack(void);
+uint_8 TWI_Read_Byte_NAck(void);
 # 10 "../MCAL/CommuncationProtocols/I2C_File.c" 2
 TWi_Micro_data TWI_1={0};
 void TWI_INIT(uint_32 SCL_F)
@@ -193,21 +194,24 @@ void TWI_INIT(uint_32 SCL_F)
   break;
  }
  (*(volatile uint_8 *)((0x01)+(0x20))) = TWSR_Temp;
- (*(volatile uint_8 *)((0x00)+(0x20)))= (uint_8) ((((16000000U)/SCL_F)-16) / (2*Presaler_Val));
+ (*(volatile uint_8 *)((0x00)+(0x20)))= (uint_8) ((((8000000U)/SCL_F)-16) / (2*Presaler_Val));
 }
 void TWI_Start(uint_8 SLA_Value)
 {
+ uint_8 TWCR_Temp =0;
  switch(TWI_1.Micro_state)
  {
   case Master_Transmitter:
-  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
-  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
-  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(5)));
+  (TWCR_Temp |= (1<<(2)));
+  (TWCR_Temp |= (1<<(7)));
+  (TWCR_Temp |= (1<<(5)));
+  (*(volatile uint_8 *)((0x36)+(0x20))) = TWCR_Temp;
   while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
   while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x08);
   (*(volatile uint_8 *)((0x03)+(0x20))) = SLA_Value;
-  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
-  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+  (TWCR_Temp |= (1<<(2)));
+  (TWCR_Temp |= (1<<(7)));
+  (*(volatile uint_8 *)((0x36)+(0x20))) =TWCR_Temp;
   while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
   while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x18);
   break;
@@ -227,38 +231,61 @@ void TWI_Start(uint_8 SLA_Value)
   break;
  }
 }
+void TWI_Repeated_Start(void)
+{
+ uint_8 TWCR_Temp=0;
+ (TWCR_Temp |= (1<<(7)));
+ (TWCR_Temp |= (1<<(2)));
+ (TWCR_Temp |= (1<<(5)));
+ (*(volatile uint_8 *)((0x36)+(0x20)))=TWCR_Temp;
+ while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
+ while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x10);
+}
 void TWI_Write_Byte(uint_8 T_Data)
 {
  (*(volatile uint_8 *)((0x03)+(0x20))) = T_Data;
- (*(volatile uint_8 *)((0x36)+(0x20)))=(1<<(7))|(1<<(2));
+ uint_8 TWCR_Temp=0;
+ (TWCR_Temp |= (1<<(7)));
+ (TWCR_Temp |= (1<<(2)));
+ (*(volatile uint_8 *)((0x36)+(0x20)))=TWCR_Temp;
  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x28);
-}
-
-void TWI_Stop(void)
-{
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(4)));
 }
 
 void Set_SLA_Value(uint_8 address)
 {
  (*(volatile uint_8 *)((0x02)+(0x20)))=address;
 }
-
-uint_8 TWI_Read_Byte(void)
+void TWI_Stop(void)
 {
-
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
- ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(6)));
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
- while(( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7)))==0);
- while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x60);
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(4)));
+}
+uint_8 TWI_Read_Byte_Ack(void)
+{
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(6)));
  ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
  while (( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7))) ==0);
  while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x80);
+ return (*(volatile uint_8 *)((0x03)+(0x20)));
+}
+void Write_address_For_Read(uint_8 address)
+{
+ (*(volatile uint_8 *)((0x03)+(0x20)))=address;
+ uint_8 TWCR_Temp=0;
+ (TWCR_Temp |= (1<<(7)));
+ (TWCR_Temp |= (1<<(2)));
+ (*(volatile uint_8 *)((0x36)+(0x20)))=TWCR_Temp;
+ while(( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7)))==0);
+ while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x40);
+}
+uint_8 TWI_Read_Byte_NAck(void)
+{
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(2)));
+ ((*(volatile uint_8 *)((0x36)+(0x20))) |= (1<<(7)));
+ while(( (((*(volatile uint_8 *)((0x36)+(0x20)))) & (1<<((7))) ) >> ((7)))==0);
+ while (((*(volatile uint_8 *)((0x01)+(0x20))) & 0xf8) != 0x58);
  return (*(volatile uint_8 *)((0x03)+(0x20)));
 }
