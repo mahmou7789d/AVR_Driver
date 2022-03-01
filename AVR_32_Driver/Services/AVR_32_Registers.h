@@ -263,6 +263,8 @@ used this register in Interrupt initalization function
 
 /************************************************************************************************ Timers Registers ***************************************************************************************************/
 
+
+//**********************************************  Timer_0
 /* The Address of The Timer 0 Register */
 #define TCCR0_ADDRESS  (0x33)
 #define TCNT0_ADDRESS  (0x32)
@@ -294,10 +296,8 @@ used this register in Interrupt initalization function
 /* Timer Counter Control Register in Timer 0 */
 #define TCCR0   (*(volatile uint_8 *)(TCCR0_ADDRESS + IO_MAPPING_OFFSET))
 
-/* Timer Interrupt Flag Register */
-#define TIFR    (*(volatile uint_8 *)(TIFR_ADDRESS  + IO_MAPPING_OFFSET))
-/* Timer Interrupt Mask Register control the interrupt*/
-#define TIMSK     (*(volatile uint_8 *)(TIMASK_ADDRESS + IO_MAPPING_OFFSET))
+
+
 /* Output Compare Register */
 #define OCR0      (*(volatile uint_8 *)(OCR0_ADDRESS + IO_MAPPING_OFFSET))
 //The Output Compare Register contains an 8-bit value that is continuously compared with the counter value (TCNT0)
@@ -311,30 +311,64 @@ used this register in Interrupt initalization function
 #define WGM00_bit   (6)
 #define FOC0_bit    (7)
 
-/* TIFR Bit */
-#define TOV0_bit  (0)
-#define OCF0_bit  (1)
-#define TOV1_bit  (2)
-#define OCF1B_bit (3)
-#define OCF1A_bit (4)
-#define ICF1_bit  (5)
-#define TOV2_bit  (6)
-#define OCF2_bit  (7)
 
-/* TIMASK Bit */
-//Timer/Counter0 Overflow Interrupt Enable with the help of I-bit in SREG Register
-// setting (TOIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer overflow interrupt
-#define TOIE0_bit   (0)
-//Timer/Counter0 Output Compare Match Interrupt Enable with the help of I-bit in SREG Register
-// setting (OCIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer Output Compare Match interrupt
-#define OCIE0_bit   (1)
-#define TOIE1_bit   (2)
-#define OCIE1B_bit  (3)
-#define OCIE1A_bit  (4)
-#define TICIE1_bit  (5)
-#define TOIE2_bit   (6)
-#define OCIE2_bit   (7)
+//**********************************************  Timer_1
 
+#define TCCR1A_ADDRESS  (0x2F)
+#define TCCR1B_ADDRESS  (0x2E)
+#define TCNT1H_ADDRESS  (0x2D)
+#define TCNT1L_ADDRESS  (0x2C)
+
+#define OCR1AH_ADDRESS  (0x2B)
+#define OCR1AL_ADDRESS  (0x2A)
+
+#define OCR1BH_ADDRESS  (0x29)
+#define OCR1BL_ADDRESS  (0x28)
+
+#define ICR1H_ADDRESS   (0x27)
+#define ICR1L_ADDRESS   (0x26)
+
+/*Counter Register For The Timer 1 */
+#define TCNT1H  (*(volatile uint_8 *)(TCNT1H_ADDRESS + IO_MAPPING_OFFSET))
+#define TCNT1L  (*(volatile uint_8 *)(TCNT1L_ADDRESS + IO_MAPPING_OFFSET))
+#define TCNT1  (*(volatile uint_8 *)(TCNT1L_ADDRESS + IO_MAPPING_OFFSET))
+/* Output Compare Register A */
+#define OCR1AH    (*(volatile uint_8 *)(OCR1AH_ADDRESS +IO_MAPPING_OFFSET))
+#define OCR1AL    (*(volatile uint_8 *)(OCR1AL_ADDRESS +IO_MAPPING_OFFSET))
+#define OCR1A     (*(volatile uint_16 *)(OCR1AL_ADDRESS +IO_MAPPING_OFFSET))
+#define OCR1BH    (*(volatile uint_8 *)(OCR1BH_ADDRESS +IO_MAPPING_OFFSET))
+#define OCR1BL    (*(volatile uint_8 *)(OCR1BL_ADDRESS +IO_MAPPING_OFFSET))
+#define OCR1B    (*(volatile uint_16 *)(OCR1BL_ADDRESS +IO_MAPPING_OFFSET))
+/* Input Capture Register */
+#define ICR1H     (*(volatile uint_8 *)(ICR1H_ADDRESS +IO_MAPPING_OFFSET))
+#define ICR1L     (*(volatile uint_8 *)(ICR1L_ADDRESS +IO_MAPPING_OFFSET))
+#define ICR1      (*(volatile uint_16 *)(ICR1L_ADDRESS +IO_MAPPING_OFFSET))
+
+
+/* Timer Counter Control Register in Timer 1 */
+#define TCCR1A   (*(volatile uint_8 *)(TCCR1A_ADDRESS+IO_MAPPING_OFFSET))
+
+/* TCCR1A Bit */
+#define WGM10_Bit    (0)
+#define WGM11_Bit    (1)
+#define FOC1B_Bit    (2)
+#define FOC1A_Bit    (3)
+#define COM1B0_Bit   (4)
+#define COM1B1_Bit   (5)
+#define COM1A0_Bit   (6)
+#define COM1A1_Bit   (7)
+
+#define TCCR1B (*(volatile uint_8 *) (TCCR1B_ADDRESS + IO_MAPPING_OFFSET))
+/* TCCR1B Bit */
+#define CS10_Bit     (0)
+#define CS11_Bit     (1)
+#define CS12_Bit     (2)
+#define WGM12_Bit    (3)
+#define WGM13_Bit    (4)
+/* Bit 5 is Reserved */
+#define ICES1_Bit    (6)
+#define ICNC1_Bit    (7)
+//**********************************************  Timer_2
 /* The Address of The Timer 2 Register */
 #define TCCR2_ADDRESS (0x25)
 #define TCNT2_ADDRESS (0x24)
@@ -357,6 +391,35 @@ used this register in Interrupt initalization function
 #define TCNT2   (*(volatile uint8 *)(TCNT2_ADDRESS + IO_MAPPING_OFFSET))
 /* Output Compare Register */
 #define OCR2    (*(volatile uint8 *)(OCR2_ADDRESS +IO_MAPPING_OFFSET))
+
+/* Timer Interrupt Flag Register */
+#define TIFR    (*(volatile uint_8 *)(TIFR_ADDRESS  + IO_MAPPING_OFFSET))
+/* TIFR Bit */
+#define TOV0_bit  (0)
+#define OCF0_bit  (1)
+#define TOV1_bit  (2)
+#define OCF1B_bit (3)
+#define OCF1A_bit (4)
+#define ICF1_bit  (5)
+#define TOV2_bit  (6)
+#define OCF2_bit  (7)
+
+
+/* Timer Interrupt Mask Register control the interrupt*/
+#define TIMSK     (*(volatile uint_8 *)(TIMASK_ADDRESS + IO_MAPPING_OFFSET))
+/* TIMASK Bit */
+//Timer/Counter0 Overflow Interrupt Enable with the help of I-bit in SREG Register
+// setting (TOIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer overflow interrupt
+#define TOIE0_bit   (0)
+//Timer/Counter0 Output Compare Match Interrupt Enable with the help of I-bit in SREG Register
+// setting (OCIE0_bit) in TIMASK Register + setting (I-bit) in SREG Register  == enabling the timer Output Compare Match interrupt
+#define OCIE0_bit   (1)
+#define TOIE1_bit   (2)
+#define OCIE1B_bit  (3)
+#define OCIE1A_bit  (4)
+#define TICIE1_bit  (5)
+#define TOIE2_bit   (6)
+#define OCIE2_bit   (7)
 
 /* The Asynchronous Statues Register ASSR */
 #define ASSR_ADRESS (0x22)

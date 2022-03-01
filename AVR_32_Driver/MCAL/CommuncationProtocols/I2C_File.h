@@ -9,13 +9,17 @@
 #ifndef I2C_FILE_H_
 #define I2C_FILE_H_
 /************************** STATUS CODE FOR Master Transmitter  ****************/
-#define  Mask_Prescaler_val         0xf8
-#define  S_Transmit_status          0x08
-#define  SLA_RW_Transmit_status     0x18
-#define  Data_Transmit_status       0x28
+#define  Mask_Prescaler_val					0xf8
+#define  S_Transmit_status					0x08
+#define  RS_Transmit_status					0x10
+#define  SLA_W_Transmit_A_Return_status     0x18
+#define  Data_Transmit_status				0x28
+/************************** STATUS CODE FOR Master Transmitter  ****************/
+#define  SLA_R_Transmit_A_Returned_status   0x40
+#define  Data_Rec_NA_Returned_status        0x58
 /************************** STATUS CODE FOR Slave Receiver  ****************/
-#define Own_SLA_A_Returned_status   0x60
-#define Data_Rec_A_Returned_status  0x80
+#define Own_SLA_A_Returned_status			0x60
+#define Data_Rec_A_Returned_status			0x80
 
 
 typedef enum
@@ -69,13 +73,14 @@ typedef struct
 
 extern TWi_Micro_data TWI_1;
 
-
-
 void Set_SLA_Value(uint_8 address);
+void Write_address_For_Read(uint_8 address);
 void TWI_INIT(uint_32 SCL_F);
 void TWI_Start(uint_8 SLA_Value);
+void TWI_Repeated_Start(void);
 void TWI_Write_Byte(uint_8 T_Data);
 void TWI_Stop(void);
-uint_8 TWI_Read_Byte();
+uint_8 TWI_Read_Byte_Ack(void);
+uint_8 TWI_Read_Byte_NAck(void);
 
 #endif /* I2C_FILE_H_ */

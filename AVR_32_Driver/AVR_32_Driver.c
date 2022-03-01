@@ -21,11 +21,17 @@
 #include <USART_File.h>
 #include <LED.h>
 #include <EEPROM.h>
-
+#include <ICU.h>
 
 
 int main ()
 {
+	ICU_Init_System();
+	ICU_Control_System();
+	while(1)
+	{
+		
+	}
 	
 }
 

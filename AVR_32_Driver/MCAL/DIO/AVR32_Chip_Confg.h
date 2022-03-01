@@ -13,12 +13,12 @@
 #include <STD_Types.h>
 #include <Macros_Functions.h>
 // Second, indicate the working Frequency of The AVR Chip
-#define F_CPU (16000000U)   // the working Frequency of The AVR Chip
+#define F_CPU (8000000U)   // the working Frequency of The AVR Chip
 
 #define printlog(msg)	{}    // embty code == no action taken when any error had happened 
 #define NULL   ((void *)(0X00))
 /* Global interrupt bit Control Define */
-#define GLOBAL_INT_ENABLE()	    (SET_BIT  (SREG,I_Bit))
+#define GLOBAL_INT_ENABLE()	    (SET_BIT(SREG,I_Bit))
 #define GLOBAL_INT_DISABLE()	(CLEAR_BIT(SREG,I_Bit))
 #  define ISR(vector, ...)            \
 void vector (void) __attribute__ ((signal,__INTR_ATTRS)) __VA_ARGS__; \

@@ -123,6 +123,13 @@
       <Value>../APP/Multiplaxing_2SevenSegment</Value>
       <Value>../MCAL/CommuncationProtocols</Value>
       <Value>../MCAL/EEPROM</Value>
+      <Value>../MCAL/Timer_1</Value>
+      <Value>../APP/Timer_APP/ICU_Timer1</Value>
+      <Value>../APP/Timer_APP/Over_Flow</Value>
+      <Value>../APP/Timer_APP/Timer_CTC_APP</Value>
+      <Value>../APP/Timer_APP/TIMER_FastPWM</Value>
+      <Value>../APP/Timer_APP/Timer_OC0_NonPWM</Value>
+      <Value>../APP/Timer_APP/Timer_PhaseCorrectPWM</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
@@ -190,34 +197,40 @@
     <Compile Include="APP\RealTimeClock\RealTimeClock.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_APP\Timer_APP.c">
+    <Compile Include="APP\Timer_APP\ICU_Timer1\ICU.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_APP\Timer_APP.h">
+    <Compile Include="APP\Timer_APP\ICU_Timer1\ICU.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_CTC_APP\Timer_CTC_APP.c">
+    <Compile Include="APP\Timer_APP\Over_Flow\Timer_APP.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_CTC_APP\Timer_CTC_APP.h">
+    <Compile Include="APP\Timer_APP\Over_Flow\Timer_APP.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\TIMER_FastPWM\Timer_FastPWM.c">
+    <Compile Include="APP\Timer_APP\Timer_CTC_APP\Timer_CTC_APP.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\TIMER_FastPWM\Timer_FastPWM.h">
+    <Compile Include="APP\Timer_APP\Timer_CTC_APP\Timer_CTC_APP.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.c">
+    <Compile Include="APP\Timer_APP\TIMER_FastPWM\Timer_FastPWM.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.h">
+    <Compile Include="APP\Timer_APP\TIMER_FastPWM\Timer_FastPWM.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.c">
+    <Compile Include="APP\Timer_APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.h">
+    <Compile Include="APP\Timer_APP\Timer_OC0_NonPWM\Timer_OC0_NonPWM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Timer_APP\Timer_PhaseCorrectPWM\Timer_PhaseCorrectPWM.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="APP\Traffic_Light\Traffic_Light.c">
@@ -340,6 +353,12 @@
     <Compile Include="MCAL\Timer 0,2\Timer0.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\Timer_1\Timer_1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Timer_1\Timer_1.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Services\AVR_32_Registers.h">
       <SubType>compile</SubType>
     </Compile>
@@ -359,12 +378,14 @@
     <Folder Include="APP\Calculator" />
     <Folder Include="APP\GameUsingTimer" />
     <Folder Include="APP\Multiplaxing_2SevenSegment" />
+    <Folder Include="APP\Timer_APP\ICU_Timer1" />
+    <Folder Include="APP\Timer_APP\Over_Flow" />
+    <Folder Include="APP\Timer_APP\Timer_CTC_APP\" />
+    <Folder Include="APP\Timer_APP\TIMER_FastPWM\" />
+    <Folder Include="APP\Timer_APP\Timer_OC0_NonPWM\" />
+    <Folder Include="APP\Timer_APP\Timer_PhaseCorrectPWM\" />
     <Folder Include="APP\Traffic_Light" />
     <Folder Include="APP\RealTimeClock" />
-    <Folder Include="APP\Timer_PhaseCorrectPWM" />
-    <Folder Include="APP\TIMER_FastPWM" />
-    <Folder Include="APP\Timer_OC0_NonPWM" />
-    <Folder Include="APP\Timer_CTC_APP" />
     <Folder Include="APP\Timer_APP" />
     <Folder Include="HAL\LED_File" />
     <Folder Include="HAL\BUZZER_File" />
@@ -383,6 +404,7 @@
     <Folder Include="MCAL\ADC" />
     <Folder Include="MCAL\CommuncationProtocols" />
     <Folder Include="MCAL\EEPROM" />
+    <Folder Include="MCAL\Timer_1" />
     <Folder Include="MCAL\Timer 0,2" />
     <Folder Include="OS" />
     <Folder Include="Services" />

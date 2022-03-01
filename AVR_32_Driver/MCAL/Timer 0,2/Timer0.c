@@ -73,7 +73,7 @@ ISR (TIMER2_COMP_vect)
 		CP_TIMER2_CompareMatch_User_ptr();
 	}
 }
-void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
+void TIMER_Init(TIMER_DataType Timer_Details,uint_8 OCR_Value)
 {
 	/* make temporary Register To Hold The Initiate Value */
     uint_8 TCCR_Temp = 0x00;
@@ -197,7 +197,7 @@ void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
 		}
 		TCCR0 = TCCR_Temp;
 		TIMSK = TIMSK_Temp;
-		OCR0 = inital_Value;
+		OCR0 = OCR_Value;
 		break;
 		case Timer2:
 		switch(Timer_Details.Timer_mode)
@@ -320,7 +320,7 @@ void TIMER_Init(TIMER_DataType Timer_Details,uint_8 inital_Value)
 		}
 		TCCR2 = TCCR_Temp;
 		TIMSK = TIMSK_Temp;
-		OCR2 = inital_Value;
+		OCR2 = OCR_Value;
 		break;
 	}
 }
